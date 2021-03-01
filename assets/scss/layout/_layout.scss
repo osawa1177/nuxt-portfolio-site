@@ -1,0 +1,21 @@
+.l-main {
+  width: 100%;
+  min-height: calc((var(--vh) * 100) - 108px);
+  margin: 0 auto;
+  @media screen and (min-width: $screen-sm) {
+    min-height: calc((var(--vh) * 100) - 118px);
+  }
+
+  &--login {
+    @extend .l-main;
+    min-height: calc((var(--vh) * 100) - 172px);
+    @media screen and (min-width: $screen-sm) {
+      min-height: calc((var(--vh) * 100) - 239px);
+    }
+  }
+}
+
+.l-footer {
+  width: 100%;
+  background: #3B4D56;
+}

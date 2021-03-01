@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body,html {
+  padding: 0;
+  margin: 0;
+  font-family: ZonaPro,Arial,sans-serif;
+  line-height: 180%;
+  letter-spacing: 0;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%
+}
+
+.v-application--wrap {
+  min-height: calc(var(--vh) * 100) !important;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li,
+a,
+textarea,
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+input {
+  line-height: 1.4 !important; // vuetify style上書き
+}
+
+.is-sp {
+  display: block;
+  @media screen and (min-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.is-pc {
+  display: none;
+  @media screen and (min-width: $screen-sm) {
+    display: block;
+  }
+}
