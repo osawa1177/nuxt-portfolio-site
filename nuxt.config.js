@@ -41,7 +41,7 @@ export default {
   ],
   googleAnalytics: {
     id: 'UA-145060590-1'
-  }
+  },
   styleResources: {
     scss: [
       '@/assets/scss/foundation/_variables.scss',
