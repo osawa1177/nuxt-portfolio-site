@@ -64,7 +64,11 @@
   flex: 0 0 auto;
   line-height: 1.5;
   margin-top: 3rem;
-  margin-bottom: 3rem
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1320px;
+  width: 100%;
 }
 
 .footer-contacts strong {

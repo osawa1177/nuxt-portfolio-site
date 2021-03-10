@@ -51,7 +51,6 @@ export default {
           start: "top 15%",
           end: "bottom 30%",
           endTrigger: ".text__last3",
-          pinSpacing: true,
           pin: ".phone3",
         }
       });
@@ -95,6 +94,8 @@ export default {
 }
 
 .outer {
+  max-width: 1320px;
+  margin: 0 auto;
   width: 100%;
   min-width: 861px;
   min-height: 100vh;

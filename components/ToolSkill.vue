@@ -353,6 +353,9 @@ export default {
     padding-top: 15vh;
     height: 100%;
     position: relative;
+    max-width: 1320px;
+    margin: 0 auto;
+    width: 100%;
   }
 
 

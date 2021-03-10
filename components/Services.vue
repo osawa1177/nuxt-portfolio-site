@@ -15,6 +15,9 @@ export default {
 
 
 .intro {
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
   display: flex;
   align-content: center;
   flex-direction: column;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container-projects">
     <div class="title" id="projects">Projects</div>
     <h2 class="text-grey-1 text-center text-7xl my-24">
       フロントエンドCSS設計、モダンな開発環境を使用してプロジェクトを実装しています。
@@ -55,6 +55,12 @@ export default {
 
 <style>
 
+.container-projects {
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .title {
   font-size: 4rem;
   margin-left: 5rem;
@@ -74,7 +80,7 @@ export default {
   width: 450px;
 }
 .w-full {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 .z-1 {
@@ -89,10 +95,6 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-}
-.mx-32 {
-  margin-left: 8rem!important;
-  margin-right: 8rem!important;
 }
 .my-24 {
   margin-bottom: 4rem!important;
