@@ -36,8 +36,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/google-analytics'
   ],
+  googleAnalytics: {
+    id: 'UA-145060590-1'
+  }
   styleResources: {
     scss: [
       '@/assets/scss/foundation/_variables.scss',

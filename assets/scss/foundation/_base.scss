@@ -2,15 +2,27 @@
   box-sizing: border-box;
 }
 
-body,html {
+body, html {
   padding: 0;
   margin: 0;
-  font-family: ZonaPro,Arial,sans-serif;
+  font-family: ZonaPro, Arial, sans-serif;
   line-height: 180%;
   letter-spacing: 0;
   font-size: 16px;
   font-weight: 400;
-  width: 100%
+  width: 100%;
+  color: #FFF;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: black;
 }
 
 .v-application--wrap {
