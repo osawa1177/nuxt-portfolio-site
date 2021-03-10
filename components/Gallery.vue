@@ -165,7 +165,7 @@ export default {
   }
 }
 .gridLayer:nth-child(4) .gridBlock {
-  top: 17.5vw;
+  top: 18.5vw;
   left: 22.5vw;
   width: 30vw;
   height: 30vw;

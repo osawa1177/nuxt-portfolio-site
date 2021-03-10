@@ -97,7 +97,8 @@ h1 {
   left: 0;
   pointer-events: none;
   z-index: 50;
-  opacity: 0
+  opacity: 0;
+  position: fixed;
 }
 
 .bgLight__pos {

@@ -29,7 +29,7 @@ export default {
   font-weight: 300;
   line-height: 1.4;
   text-align: left;
-  margin: 5rem;
+  margin: 11.25rem 0 5rem 5rem;
 }
 
 .intro__text-ios {

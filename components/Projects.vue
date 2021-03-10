@@ -59,6 +59,7 @@ export default {
   max-width: 1320px;
   margin: 0 auto;
   width: 100%;
+  padding-top: 11.25rem;
 }
 
 .title {

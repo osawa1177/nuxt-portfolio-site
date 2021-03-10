@@ -350,7 +350,7 @@ export default {
   }
 
   .skills {
-    padding-top: 15vh;
+    padding-top: 11.25rem;
     height: 100%;
     position: relative;
     max-width: 1320px;

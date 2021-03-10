@@ -35,7 +35,7 @@
 
 .footer {
   line-height: normal;
-  margin-top: 20rem;
+  margin-top: 11.25rem;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
