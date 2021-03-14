@@ -20,6 +20,7 @@
     <Design />
     <Development />
     <Projects />
+    <ProjectsLivemasq />
     <ToolSkill />
   </div>
 
