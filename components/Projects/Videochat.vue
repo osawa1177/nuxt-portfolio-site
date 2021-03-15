@@ -1,10 +1,10 @@
 <template>
   <div class="projects__wrap" id="development">
     <div class="projects__title-wrap">
-      <div class="projects__group">Project-02 / <span>2020-12</span></div>
-      <div class="projects__title">モザイクWebアプリ</div>
+      <div class="projects__group">Project-03 / <span>2020-07</span></div>
+      <div class="projects__title">ビデオチャットWebアプリ</div>
       <div class="projects__description">
-        動画から人物の顔を検出し、人物の顔部分にモザイク処理を施した動画を出力します。人物の非特定化などプライバシー保護に活用できます。
+       表示されている顔の表情から、各個人の楽しい表情や悲しい表情など様々な感情をグラフで確認できるビデオチャットWebアプリです。
       </div>
       <div class="projects__tags">
         <span class="projects__tags">UI設計</span>
@@ -12,10 +12,10 @@
       </div>
     </div>
 
-    <div class="projects__preview-wrap">
+    <div class="projects__preview-wrap preview-videochat">
       <div class="projects__preview">
         <div class="projects__image">
-          <img src="@/assets/img/autopixelation.png">
+          <img src="@/assets/img/videochat.png">
         </div>
       </div>
     </div>
@@ -38,10 +38,10 @@ export default {
   },
   methods: {
     projectsItem() {
-      gsap.to(".projects__preview-wrap", {
+      gsap.to(".preview-videochat", {
         opacity: 1,
         scrollTrigger: {
-          trigger: ".projects__preview-wrap",
+          trigger: ".preview-videochat",
           start: "top 70%",
           end: "bottom 10%",
           scrub: true,

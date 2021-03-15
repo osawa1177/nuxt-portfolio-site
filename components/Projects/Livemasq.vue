@@ -4,7 +4,7 @@
       <div class="projects__group">Project-01 / <span>2021-03</span></div>
       <div class="projects__title">リアルタイムモザイクアプリ</div>
       <div class="projects__description">
-        LiveMasqはリアルタイムにモザイクをかけることができるサービスです。撮影と同時に、特定の人以外にモザイクを かけることでプライバシーを保護します。
+        LiveMasqはリアルタイムにモザイクをかけることができるサービスです。撮影と同時に、特定の人以外にモザイクをかけることでプライバシーを保護します。
       </div>
       <div class="projects__tags">
         <span class="projects__tags">UI設計</span>
@@ -12,10 +12,10 @@
       </div>
     </div>
 
-    <div class="projects__preview-wrap">
+    <div class="projects__preview-wrap preview-livemasq">
       <div class="projects__preview">
         <div class="projects__image">
-          <img src="@/assets/img/img_13.png">
+          <img src="@/assets/img/livemasq.png">
         </div>
       </div>
     </div>
@@ -38,10 +38,10 @@ export default {
   },
   methods: {
     projectsItem() {
-      gsap.to(".projects__preview-wrap", {
+      gsap.to(".preview-livemasq", {
         opacity: 1,
         scrollTrigger: {
-          trigger: ".projects__preview-wrap",
+          trigger: ".preview-livemasq",
           start: "top 70%",
           end: "bottom 10%",
           scrub: true,

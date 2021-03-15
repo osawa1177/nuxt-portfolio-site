@@ -153,7 +153,7 @@ export default {
   top: 32.5vw;
   width: 15vw;
   height: 15vw;
-  background: url("~assets/img/img_13.png") no-repeat;
+  background: url("~assets/img/livemasq.png") no-repeat;
   background-size: cover;
 }
 @media only screen and (max-width: 580px) {
@@ -193,7 +193,7 @@ export default {
   top: 27.5vw;
   width: 20vw;
   height: 20vw;
-  background: url("~assets/img/img_14.png") no-repeat;
+  background: url("~assets/img/videochat.png") no-repeat;
   background-size: contain;
 }
 @media only screen and (max-width: 580px) {

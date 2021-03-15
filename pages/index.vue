@@ -20,8 +20,9 @@
     <Design />
     <Development />
     <Projects />
-    <ProjectsLivemasq />
-    <ProjectsAutopixelation />
+    <Livemasq />
+    <Autopixelation />
+    <Videochat />
     <ToolSkill />
   </div>
 
