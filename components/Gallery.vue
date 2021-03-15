@@ -170,7 +170,7 @@ export default {
   width: 30vw;
   height: 30vw;
   z-index: 3;
-  background: url("~assets/img/img_15.png") no-repeat;
+  background: url("~assets/img/autopixelation.png") no-repeat;
   background-size: contain;
 
 }

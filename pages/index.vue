@@ -21,6 +21,7 @@
     <Development />
     <Projects />
     <ProjectsLivemasq />
+    <ProjectsAutopixelation />
     <ToolSkill />
   </div>
 
