@@ -149,5 +149,10 @@ export default {
   line-height: 1.5;
 }
 
+.home-service h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
 
 </style>

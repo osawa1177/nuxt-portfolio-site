@@ -121,6 +121,7 @@ a:hover {
   line-height: 1.5;
   margin-left: 5rem;
   font-weight: 300;
+  font-size: 1.5rem;
 }
 
 
