@@ -39,7 +39,7 @@ export default {
       projects: [
         {
           link: "https://dribbble.com/shots/15091099-LiveMasq-app",
-          description: "LiveMasqはリアルタイムにモザイクをかけることができるアプリです",
+          description: "LiveMasqはリアルタイムにモザイクをかけることができるアプリです。",
           image: require("@/assets/img/livemasq-app.png"),
           tag: "IOSアプリ"
         },
@@ -51,7 +51,7 @@ export default {
         },
         {
           link: "https://dribbble.com/shots/14042005-Emotion-vide-chat-app",
-          description: "表示されている顔の表情から、各個人の楽しい表情や悲しい表情など様々な感情をグラフで確認できるビデオチャットWebアプリです。\n。",
+          description: "表示されている顔の表情から、各個人の楽しい表情や悲しい表情など様々な感情をグラフで確認できるビデオチャットWebアプリです\n。",
           image: require("@/assets/img/videochat-web-app.png"),
           tag: "Webアプリ",
         },

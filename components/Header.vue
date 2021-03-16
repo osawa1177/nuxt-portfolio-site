@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <a href="#" class="header-logo">
+    <a href="/" class="header-logo">
       <span class="header-logo-img site-title"><img src="~/assets/img/logo.svg"/></span>
     </a>
     <div class="container">
