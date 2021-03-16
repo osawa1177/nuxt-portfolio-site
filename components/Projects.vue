@@ -5,7 +5,7 @@
       フロントエンドCSS設計、モダンな開発環境を使用してプロジェクトを実装しています。
     </h2>
     <div class="relative">
-      <img class="absolute inset-0 w-full" src="~/assets/img/macbookpro.jpg">
+      <img class="absolute inset-0 w-full" src="~/assets/img/macbookpro.png">
       <div class="mx-32 relative z-1 text-center pt-6">
         <div class="w-full divice">
           <img src="~/assets/img/img.png" class=" py-2 fade-down"/>
@@ -53,7 +53,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 .container-projects {
   max-width: 1320px;
@@ -117,7 +117,7 @@ a:hover {
 
 
 .text-grey-1 {
-  color: rgba(255,255,255,0.5);
+  color: $white60;
   line-height: 1.5;
   margin-left: 5rem;
   font-weight: 300;
