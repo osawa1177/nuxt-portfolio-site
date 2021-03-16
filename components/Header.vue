@@ -5,11 +5,11 @@
     </a>
     <div class="container">
       <ul class="header-menu">
-        <li class="header-item"><a href="#services" class="header-link">Services</a></li>
-        <li class="header-item"><a href="#design" class="header-link">Design</a></li>
-        <li class="header-item"><a href="#development" class="header-link">Development</a></li>
-        <li class="header-item"><a href="#projects" class="header-link">Projects</a></li>
-        <li class="header-item"><a href="#tool-skill" class="header-link">Tool & Skill</a></li>
+        <li class="header-item"><a href="/#services" class="header-link">Services</a></li>
+        <li class="header-item"><a href="/#design" class="header-link">Design</a></li>
+        <li class="header-item"><a href="/#development" class="header-link">Development</a></li>
+        <li class="header-item"><nuxt-link to="/projects" class="header-link">Projects</nuxt-link></li>
+        <li class="header-item"><a href="/#tool-skill" class="header-link">Tool & Skill</a></li>
       </ul>
     </div>
   </header>
