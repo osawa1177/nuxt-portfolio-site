@@ -1,0 +1,23 @@
+
+.c-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 6.5rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.c-container--large {
+  max-width: 100%;
+  padding: 0 100px
+}
+
+.c-container--small {
+  max-width: 920px
+}
+
+@media(max-width: 767px) {
+  .c-container {
+    padding:0 15px
+  }
+}
