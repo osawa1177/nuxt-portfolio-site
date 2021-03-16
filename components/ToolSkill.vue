@@ -240,11 +240,11 @@ export default {
     height: 1em;
     position: relative;
     margin: 0 auto;
-    background-color: #5a5a5a;
+    background-color: $white26;
   }
 
   .chart-item {
-    background-color: #ccc;
+    background-color: $white60;
     left: 0;
     position: absolute;
     height: 1rem;
@@ -318,16 +318,16 @@ export default {
     padding: 1.6em 0.8em 1.3em;
     text-align: center;
     font-weight: bold;
-    border: solid 1px rgba(255,255,255,0.3);
+    border: solid 1px $white26;
     border-radius: 4px;
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.18);
-    background: #000;
+    box-shadow: 0 2px 4px -1px $black12;
+    background: $black;
     text-decoration: none;
     transition: 0.2s;
-    color: #fff;
+    color: $white;
 
     &:hover {
-      box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 10px 15px -5px $black12;
     }
 
     img {

@@ -23,13 +23,174 @@
     <Livemasq />
     <Autopixelation />
     <Videochat />
+
+    <div class="button__wrap">
+    <nuxt-link to="/projects"  class="more fadeonscroll mouse-attract button button-undefined active">
+      <span class="button-inner mouse-target">
+        <span class="button-fill"></span>
+      <span class="button-caption">View More</span>
+    </span>
+    </nuxt-link>
+    </div>
     <ToolSkill />
   </div>
 
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+
+.button__wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 11.25rem;
+}
+
+
+.button {
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  border-radius: 30px
+}
+
+.button,.button-inner {
+  display: inline-block;
+  transition: all .5s;
+  position: relative;
+}
+
+.button-inner {
+  line-height: 30px;
+  font-size: 1rem;
+  padding: 20px 120px;
+  color: $white;
+  font-weight: 500;
+  box-sizing: border-box;
+  text-align: center;
+  background: transparent;
+  border: 1px solid $white;
+  overflow: hidden;
+  border-radius: 55px;
+  vertical-align: top
+}
+
+.button-inner:before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  border-radius: 30px;
+  opacity: 0;
+  content: "";
+  transition: all .5s
+}
+
+@media(max-width: 767px) {
+  .button-inner {
+    font-size:1.143rem
+  }
+}
+
+.button:focus,.button:hover {
+  -webkit-animation: scale .5s linear 1;
+  animation: scale .5s linear 1;
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s
+}
+
+.button:focus .button-fill:before,.button:hover .button-fill:before {
+  transform: scale(2.2)
+}
+
+.button:disabled {
+  opacity: .4;
+  pointer-events: none
+}
+
+.button:focus,.button:hover .button-inner {
+  border-color: transparent;
+  color: $white;
+  transition-duration: .2s
+}
+
+.button:focus:before,.button:hover .button-inner:before {
+  opacity: 1
+}
+
+.button.selected .button-inner {
+  border-color: $primary;
+  color: $black;
+}
+
+.button.selected .button-inner .button-caption {
+  color: $black;
+}
+
+.button-caption {
+  position: relative;
+  z-index: 1
+}
+
+.button-block {
+  width: 100%;
+  display: block
+}
+
+.button-block .button-inner {
+  display: block
+}
+
+.button-filled .button-inner {
+  color: $white;
+  border: 0
+}
+
+.button-filled .button-inner:before {
+  background: $black;
+  opacity: 1
+}
+
+.button-filled:hover .button-inner:before {
+  background: $black;
+}
+
+.button-small {
+  font-size: .875rem;
+  padding: 5px 20px;
+  color: $primary;
+  border-radius: 12px
+}
+
+.button-fill {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding-top: 100%;
+  transform: translate(-50%,-50%)
+}
+
+.button-fill:before {
+  position: absolute;
+  top: 0;
+  content: "";
+  background: linear-gradient(190.05deg,#98e8fc -16.32%,#1fa9ff 56.32%,#8980f6 115.25%);
+  border-radius: 50%;
+  transform: scale(0)
+}
+
+.button-fill:before,.cookies-notification {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all .5s
+}
+
+
 
 .caption {
   position: absolute;
