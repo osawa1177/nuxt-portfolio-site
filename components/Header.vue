@@ -1,15 +1,15 @@
 <template>
   <header class="header">
-    <a href="#" class="header-logo">
+    <a href="/" class="header-logo">
       <span class="header-logo-img site-title"><img src="~/assets/img/logo.svg"/></span>
     </a>
     <div class="container">
       <ul class="header-menu">
-        <li class="header-item"><a href="#services" class="header-link">Services</a></li>
-        <li class="header-item"><a href="#design" class="header-link">Design</a></li>
-        <li class="header-item"><a href="#development" class="header-link">Development</a></li>
-        <li class="header-item"><a href="#projects" class="header-link">Projects</a></li>
-        <li class="header-item"><a href="#tool-skill" class="header-link">Tool & Skill</a></li>
+        <li class="header-item"><a href="/#services" class="header-link">Services</a></li>
+        <li class="header-item"><a href="/#design" class="header-link">Design</a></li>
+        <li class="header-item"><a href="/#development" class="header-link">Development</a></li>
+        <li class="header-item"><nuxt-link to="/projects" class="header-link">Projects</nuxt-link></li>
+        <li class="header-item"><a href="/#tool-skill" class="header-link">Tool & Skill</a></li>
       </ul>
     </div>
   </header>
@@ -56,9 +56,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 100px
-}
+  height: 100px;
 
+  @include sp {
+    flex-direction: column;
+  }
+}
 
 .header-logo {
   position: absolute;
@@ -66,7 +69,11 @@
   top: 13px;
   width: 40px;
   height: 40px;
-  z-index: 10
+  z-index: 10;
+
+  @include sp {
+    left: 8px;
+  }
 }
 
 .header-logo-img, .header-logo-text {
@@ -75,7 +82,6 @@
   left: 0;
   transition: all .5s
 }
-
 
 .header-item {
   margin-left: 3rem
@@ -91,7 +97,6 @@
 .header-link:hover {
   color: rgba(255, 255, 255, 0.5);
   width: calc(100% - 1rem)
-
 }
 
 .header-link:before {
@@ -138,6 +143,10 @@
   transform: none;
   margin: 0 80px 0 0;
   position: relative;
+
+  @include sp {
+    display: none;
+  }
 }
 
 

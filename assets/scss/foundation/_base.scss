@@ -11,23 +11,139 @@ body, html {
   font-size: 16px;
   font-weight: 400;
   width: 100%;
-  color: #FFF;
-  scroll-behavior: smooth;
+  color: $white;
+  background: $black;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
+
+
+@media(max-width: 1500px) {
+  body,html {
+    font-size:14px
+  }
+}
+
+@media(max-width: 767px) {
+  body,html {
+    font-size:14px;
+    overflow-x: hidden
+  }
+}
+
+.header-anchor {
+  display: none
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: all .5s
+}
+
+a:hover {
+  color: #26a0f8
+}
+
+a.lined,a:not([class]) {
+  position: relative
+}
+
+a.lined:after,a:not([class]):after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  background: rgba(38,160,248,.2);
+  height: 1px;
+  transition: all .8s;
+  content: "";
+  transition-timing-function: cubic-bezier(.5,0,1,1);
+  pointer-events: none;
+  transform: none
+}
+
+a.lined:hover:after,a:not([class]):hover:after {
+  width: 100%;
+  background: rgba(38,160,248,.5);
+  transition: all .5s;
+  transition-timing-function: ease-out
+}
+
+a.lined:before {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  pointer-events: none
+}
+
+h1 {
+  font-size: 3.75rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+  margin: 0 0 7rem;
+  letter-spacing: -.02em
+}
+
+h2 {
+  font-size: 3.25rem
+}
+
+h2,h3 {
+  font-weight: 500;
+  margin: 0 0 2rem
+}
+
+h3 {
+  font-size: 2.75rem;
+  line-height: normal
+}
+
+h4 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem
+}
+
+strong {
+  font-weight: 500
+}
+
+@media(max-width: 767px) {
+  h1 {
+    font-size:2.85rem;
+    margin-bottom: 4rem
+  }
+
+  h2 {
+    font-size: 2.57rem
+  }
+
+  h3 {
+    font-size: 2.28rem
+  }
+
+  h4 {
+    font-size: 2rem
+  }
+}
+
+p,ul {
+  margin: 0 0 1.5rem
+}
+
+ul {
+  padding: 0
+}
+
+button,input,select,textarea {
+  font-family: ZonaPro,Arial,sans-serif;
   margin: 0;
-  background: black;
+  font-size: 1rem;
+  font-weight: 600
 }
 
-.v-application--wrap {
-  min-height: calc(var(--vh) * 100) !important;
-}
 
 ul,
 li {
@@ -48,9 +164,6 @@ button {
   }
 }
 
-input {
-  line-height: 1.4 !important; // vuetify style上書き
-}
 
 .is-sp {
   display: block;
@@ -64,4 +177,32 @@ input {
   @media screen and (min-width: $screen-sm) {
     display: block;
   }
+}
+
+@font-face {
+  font-family: ZonaPro;
+  src: url(~assets/fonts/zonapro-regular-webfont.woff);
+  font-weight: 400;
+  font-display: swap
+}
+
+@font-face {
+  font-family: ZonaPro;
+  src: url(~assets/fonts/zonapro-semibold-webfont.woff);
+  font-weight: 500;
+  font-display: swap
+}
+
+@font-face {
+  font-family: ZonaPro;
+  src: url(~assets/fonts/zonapro-bold-webfont.woff);
+  font-weight: 600;
+  font-display: swap
+}
+
+@font-face {
+  font-family: ZonaPro;
+  src: url(~assets/fonts/zonapro-extrabold-webfont.woff);
+  font-weight: 700;
+  font-display: swap
 }

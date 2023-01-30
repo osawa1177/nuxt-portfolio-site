@@ -67,7 +67,6 @@
   margin-bottom: 3rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1320px;
   width: 100%;
 }
 

@@ -76,13 +76,18 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 .home-services-details {
   display: flex;
   flex-flow: row wrap;
   width: 90%;
   justify-content: space-between;
+
+  @include sp {
+    flex-direction: column;
+    width: 45%;
+  }
 }
 
 .home-service {
@@ -91,6 +96,10 @@ export default {
   min-height: 250px;
   box-sizing: border-box;
   line-height: 1.5;
+
+  @include sp {
+    min-height: 125px;
+  }
 }
 
 .outer {
@@ -102,6 +111,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include sp {
+    flex-direction: column;
+  }
 }
 
 .device {
@@ -121,6 +134,12 @@ export default {
   font-size: 4rem;
   padding-left: 5rem;
   padding-top: 2rem;
+
+  @include sp {
+    font-size: 3.5rem;
+    padding: 0!important;
+  }
+
 }
 
 .phone2 {
@@ -139,6 +158,10 @@ export default {
   width: 100%;
   height: 100vh;
   line-height: 1.1;
+
+  @include sp {
+    padding: 16px;
+  }
 }
 
 .text h1 {
@@ -147,6 +170,16 @@ export default {
   padding-bottom: 40px;
   font-size: 1.5rem;
   line-height: 1.5;
+
+  @include sp {
+    width: 45%;
+    margin: 0;
+  }
+}
+
+.home-service h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 
