@@ -66,6 +66,11 @@ export default {
   font-size: 4rem;
   margin-left: 5rem;
   margin-bottom: 2rem;
+
+  @include sp {
+    font-size: 3rem;
+    margin-left: 2rem;
+  }
 }
 
 .divice {
@@ -83,6 +88,12 @@ export default {
 .w-full {
   width: 90%;
   margin: 0 auto;
+
+  @include sp {
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px
+  }
 }
 .z-1 {
   z-index: 1;
@@ -102,6 +113,10 @@ export default {
 }
 .absolute {
   position: absolute;
+
+  @include sp {
+    display: none;
+  }
 }
 
 a:hover {
@@ -113,6 +128,10 @@ a:hover {
 }
 .pt-6 {
   padding-top: 6rem;
+
+  @include sp {
+    padding: 0;
+  }
 }
 
 
@@ -122,6 +141,11 @@ a:hover {
   margin-left: 5rem;
   font-weight: 300;
   font-size: 1.5rem;
+
+  @include sp {
+    margin: 24px;
+    margin-bottom: 0!important;
+  }
 }
 
 

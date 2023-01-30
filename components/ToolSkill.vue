@@ -356,6 +356,10 @@ export default {
     max-width: 1320px;
     margin: 0 auto;
     width: 100%;
+
+    @include sp {
+      padding-top: 58px;
+    }
   }
 
 

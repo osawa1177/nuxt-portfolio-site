@@ -66,6 +66,11 @@ export default {
     min-height: 100vh;
     display: flex;
     justify-content: center;
+
+    @include sp {
+      flex-direction: column;
+      min-width: 400px;
+    }
   }
 
 
@@ -73,6 +78,11 @@ export default {
     margin-left: 5rem;
     margin-bottom: auto;
     width: 50%;
+
+    @include sp {
+      margin: 0 24px;
+      width: auto;
+    }
   }
 
 
@@ -100,6 +110,10 @@ export default {
 
   &__tags {
     margin: 0 1rem 0 0;
+
+    @include sp {
+      margin: 0px 0px 16px;
+    }
   }
 
   &__preview-wrap {

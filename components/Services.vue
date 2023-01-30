@@ -11,7 +11,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 
 .intro {
@@ -22,6 +22,11 @@ export default {
   align-content: center;
   flex-direction: column;
   min-height: 80vh;
+
+  @include sp {
+    width: 90%;
+    min-height: 0;
+  }
 }
 
 .intro__text {
@@ -30,12 +35,23 @@ export default {
   line-height: 1.4;
   text-align: left;
   margin: 11.25rem 0 5rem 5rem;
+
+  @include sp {
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 40px;
+  }
 }
 
 .intro__text-ios {
   margin: 10px auto 0 auto;
   font-size: 200px;
   color: #333;
+
+  @include sp {
+    font-size: 120px;
+  }
+
 }
 
 </style>

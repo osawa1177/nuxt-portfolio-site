@@ -56,9 +56,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 100px
-}
+  height: 100px;
 
+  @include sp {
+    flex-direction: column;
+  }
+}
 
 .header-logo {
   position: absolute;
@@ -66,7 +69,11 @@
   top: 13px;
   width: 40px;
   height: 40px;
-  z-index: 10
+  z-index: 10;
+
+  @include sp {
+    left: 8px;
+  }
 }
 
 .header-logo-img, .header-logo-text {
@@ -75,7 +82,6 @@
   left: 0;
   transition: all .5s
 }
-
 
 .header-item {
   margin-left: 3rem
@@ -91,7 +97,6 @@
 .header-link:hover {
   color: rgba(255, 255, 255, 0.5);
   width: calc(100% - 1rem)
-
 }
 
 .header-link:before {
@@ -138,6 +143,10 @@
   transform: none;
   margin: 0 80px 0 0;
   position: relative;
+
+  @include sp {
+    display: none;
+  }
 }
 
 
