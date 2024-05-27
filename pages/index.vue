@@ -1,6 +1,5 @@
 <template>
 
-
   <div class="content__hero">
     <div class="menu-toggle">
       <div class="one"></div>
@@ -390,7 +389,7 @@ h1 {
 .video {
   display: block;
   width: 100%;
-  height: 600px;
+  height: 90vh;
   object-fit: cover;
   position: absolute;
   top: 0;
