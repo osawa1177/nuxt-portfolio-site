@@ -22,12 +22,10 @@
 .site-title {
   transition: width 0.25s ease-in-out 0.05s;
 
-
   img {
     width: 100px;
     height: 70px;
   }
-
 }
 
 .header {

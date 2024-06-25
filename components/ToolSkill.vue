@@ -240,14 +240,16 @@ export default {
     height: 1em;
     position: relative;
     margin: 0 auto;
-    background-color: $white26;
+    background-color: $white60;
+    border-radius: 4px;
   }
 
   .chart-item {
-    background-color: $white60;
+    background-color: #26A0F8;
     left: 0;
     position: absolute;
     height: 1rem;
+    border-radius: 4px;
   }
 
   .chart-100 {

@@ -1,26 +1,33 @@
 <template>
   <main>
+    <div class="bgLight">
+      <div class="bgLight__pos bgLight__one"></div>
+      <div class="bgLight__pos bgLight__two"></div>
+      <div class="bgLight__pos bgLight__three"></div>
+    </div>
     <div class="c-container">
       <div class="c-page__title">
         <span class="c-page__headline">Latest projects</span>
-        <h1 class="c-page__content">これまでに携わったProjectsで作成した、Webサイトやアプリのデザインの一部をご覧ください。</h1>
+        <h1 class="c-page__content">これまでのプロジェクトで手がけたWebサイトやアプリのデザインの一覧です</h1>
+        <p class="c-page__text">これまでに携わったプロジェクトの中で制作したWebサイトやアプリのデザインの一部をぜひご覧ください。</p>
       </div>
-      <div class="p-projects__list-grid">
-        <div class="p-projects__project p-projects__project-active" v-for="project in projects">
-          <a :href="project.link" target="_blank" class="p-projects__project-link"></a>
-          <div class="p-projects__project-image">
-            <div class="p-projects__project-wrap">
-              <img :src="project.image">
+
+      <section class="p-projects__wrap">
+          <div v-for="project in projects" :key="project.slug" v-if="project && project.show" class="p-projects__project p-projects__project-active">
+            <nuxt-link :to="`/projects/${project.slug}`" class="p-projects__project-link">
+            <div class="p-projects__project-image">
+              <div class="p-projects__project-wrap">
+                <img :src="`/img/${project.img}`" alt="Project Image">
+              </div>
             </div>
-          </div>
-          <div class="p-projects__project-details">
-            <div class="p-projects__project-description">{{ project.description }}</div>
-            <div class="p-projects__project-tags">
-              <span class="project__tag">{{ project.tag }}</span>
+            <div class="p-projects__project-details">
+              <div class="p-projects__project-tags"><span class="p-projects__tag">{{ project.tag }}</span></div>
+              <div class="p-projects__project-link">{{ project.title }}</div>
+              <div class="p-projects__project-description">{{ project.description }}</div>
             </div>
+            </nuxt-link>
           </div>
-        </div>
-      </div>
+      </section>
     </div>
   </main>
 </template>
@@ -34,39 +41,15 @@ if (process.client) {
 }
 
 export default {
-  data() {
-    return {
-      projects: [
-        {
-          link: "https://dribbble.com/shots/15091099-LiveMasq-app",
-          description: "LiveMasqはリアルタイムにモザイクをかけることができるアプリです。",
-          image: require("@/assets/img/livemasq-app.png"),
-          tag: "IOSアプリ"
-        },
-        {
-          link: "https://dribbble.com/shots/14141834-Neumorphism-notification",
-          description: "AutoPixelationは自動で人物の顔を検出し、モザイクを編集ができるWebアプリです。",
-          image: require("@/assets/img/auto-pixelation-app.png"),
-          tag: "Webアプリ"
-        },
-        {
-          link: "https://dribbble.com/shots/14042005-Emotion-vide-chat-app",
-          description: "表示されている顔の表情から、各個人の楽しい表情や悲しい表情など様々な感情をグラフで確認できるビデオチャットWebアプリです\n。",
-          image: require("@/assets/img/videochat-web-app.png"),
-          tag: "Webアプリ",
-        },
-        {
-          link: "https://dribbble.com/shots/14044798-Construction-management-app",
-          description: "職人さん達が現場で進行状況などを管理するWebアプリです。fixしませんでしたが、初めに作成したLogin周りのデザインを載せています。",
-          image: require("@/assets/img/login-view.png"),
-          tag: "Webアプリ",
-        }
-      ],
-    }
+  async asyncData() {
+    const projects = await fetch('/content/projects.json')
+      .then(res => res.json())
+      .catch(() => []);
+    return {projects};
   },
 
   mounted() {
-    this.projectsItem
+    this.projectsItem();
   },
 
   methods: {
@@ -77,13 +60,195 @@ export default {
           trigger: ".p-projects__project-active",
           start: "top 70",
           end: "bottom 10",
-          scrub: "true",
+          scrub: true,
         }
       });
     },
-
   }
 }
-
 </script>
 
+<style lang="scss" scoped>
+@import '~/assets/scss/foundation/_bglight.scss';
+
+
+.p-projects {
+
+  &__wrap {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  &__list-grid {
+    width: 100%;
+
+    @media(max-width: 767px) {
+      grid-template-columns:1fr
+    }
+  }
+
+  &__project {
+    position: relative;
+    overflow: hidden;
+    transform: translateY(100px);
+    transform-origin: 50% 100%;
+    opacity: 0;
+    transition: all 1s;
+    flex: 1;
+    flex-basis: 35%;
+    max-width: 550px;
+    max-height: 761px;
+  }
+
+  &__project-link {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__project-image {
+    position: relative;
+    border: 0;
+    padding-top: 103.8%;
+    height: 0;
+    transition: all .5s;
+
+    @media(max-width: 767px) {
+      transform: none;
+      opacity: 1
+    }
+  }
+
+  &__project-image img {
+    width: 100%
+  }
+
+  &__tag {
+    border: 1px solid #fff;
+    padding: 4px 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  &__project:hover &__project-image {
+    transform: scale(1.02)
+  }
+
+  &__project-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+  }
+
+  &__project-title {
+    font-size: 3.75rem;
+    font-weight: 500;
+  }
+
+  &__project-details {
+    position: relative;
+    padding: 0 3.75rem 2.5rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__project-description {
+    font-size: 16px;
+    margin-bottom: 1rem;
+    line-height: 1.65;
+    font-weight: 100;
+
+    @media(max-width: 767px) {
+      font-size: 1.7rem
+    }
+  }
+
+  &__project__tag {
+    font-size: 1rem;
+    color: #fff;
+    margin-right: 1rem;
+    position: relative;
+    border: 1px solid #fff;
+    padding: 4px 8px;
+    text-align: center;
+  }
+
+  &__project--large {
+    grid-column: span 2;
+
+    @media(max-width: 767px) {
+      grid-column: span 1
+    }
+  }
+
+  &__project--large &__project-image {
+    padding-top: 54%
+  }
+
+  &__project--large &__project-details {
+    top: 7%;
+    bottom: auto;
+    right: 55%;
+    left: 0;
+    position: absolute;
+  }
+
+  @media(max-width: 767px) {
+    &__project-wrap {
+      left: -8%;
+      right: -8%
+    }
+
+    &__project-image {
+      padding-top: 120%
+    }
+
+    &__project-details {
+      padding: 0 1rem 2rem
+    }
+
+    &__project--large &__project-image {
+      padding-top: 120%
+    }
+
+    &__project--large &__project-wrap {
+      left: 0;
+      right: 0
+    }
+
+    &__project--large &__project-details {
+      position: relative;
+      top: 0;
+      right: 0;
+      left: 0
+    }
+  }
+
+  &__project-active {
+    transform: none;
+    opacity: 1
+  }
+
+  &__tags .button {
+    margin: 0 1.5rem 1.5rem 0
+  }
+
+  @media(max-width: 767px) {
+    &__tags {
+      white-space: nowrap;
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-left: 15px;
+      overflow: hidden;
+      overflow-x: scroll
+    }
+  }
+
+}
+
+</style>
