@@ -14,7 +14,6 @@
           </div>
           <div class="tool-skill-name">HTML5</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/css.png"/>
           </div>
@@ -44,7 +43,6 @@
           </div>
           <div class="tool-skill-name">Illustrator</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/xd.png"/>
           </div>
@@ -54,7 +52,6 @@
           </div>
           <div class="tool-skill-name">Adobe XD</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/javascript.png"/>
           </div>
@@ -64,7 +61,6 @@
           </div>
           <div class="tool-skill-name">javascript</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/jquery.png"/>
           </div>
@@ -74,7 +70,6 @@
           </div>
           <div class="tool-skill-name">jqery</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/vue.png"/>
           </div>
@@ -84,7 +79,6 @@
           </div>
           <div class="tool-skill-name">Vue.js</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/wordpress.png"/>
           </div>
@@ -94,7 +88,6 @@
           </div>
           <div class="tool-skill-name">Wordpress</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/git.png"/>
           </div>
@@ -104,7 +97,6 @@
           </div>
           <div class="tool-skill-name">Git</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/bootstrap.png"/>
           </div>
@@ -114,7 +106,6 @@
           </div>
           <div class="tool-skill-name">Bootstrap 3 / 4</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/sass.png"/>
           </div>
@@ -124,7 +115,6 @@
           </div>
           <div class="tool-skill-name">Scss</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/vscode.png"/>
           </div>
@@ -134,7 +124,6 @@
           </div>
           <div class="tool-skill-name">vscode</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/intelij.png"/>
           </div>
@@ -144,7 +133,6 @@
           </div>
           <div class="tool-skill-name">Intelij</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/googleanalytics.png"/>
           </div>
@@ -154,7 +142,6 @@
           </div>
           <div class="tool-skill-name">Googleanalytics</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/seo.png"/>
           </div>
@@ -164,7 +151,6 @@
           </div>
           <div class="tool-skill-name">SEO</div>
         </div>
-        <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/design.png"/>
           </div>
@@ -240,14 +226,16 @@ export default {
     height: 1em;
     position: relative;
     margin: 0 auto;
-    background-color: $white26;
+    background-color: $white60;
+    border-radius: 4px;
   }
 
   .chart-item {
-    background-color: $white60;
+    background-color: #26A0F8;
     left: 0;
     position: absolute;
     height: 1rem;
+    border-radius: 4px;
   }
 
   .chart-100 {

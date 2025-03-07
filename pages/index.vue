@@ -26,7 +26,6 @@
       });
     </script>
     <section class="section hero">
-      <video id="video" class="video" webkit-playsinline="" preload="auto" muted="" autoplay="" loop="" src="~/assets/img/toolskill/9835.mp4"></video>
       <div class="container">
         <a class="underlined underlined_angular"><span>Design.</span></a>
         <a class="underlined underlined_dashed"><span>Development.</span></a>
@@ -46,9 +45,7 @@
     <Design/>
     <Development/>
     <Projects/>
-    <Livemasq/>
-    <Autopixelation/>
-    <Videochat/>
+
 
     <div class="button__wrap">
       <nuxt-link to="/projects" class="more fadeonscroll mouse-attract button button-undefined active">
@@ -90,59 +87,60 @@ export default {
 </script>
 <style lang="scss" scoped>
 
-  .menu-toggle {
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 999;
-    cursor: pointer;
-  }
 
-  .menu-toggle div {
-    width: 100%;
-    height: 3px;
-    background: #333;
-    margin: 6px 0;
-  }
+.menu-toggle {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 999;
+  cursor: pointer;
+}
 
-  nav.menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    height: 100%;
-    background: #fff;
-    transition: all 0.3s;
-    z-index: 998;
-  }
+.menu-toggle div {
+  width: 100%;
+  height: 3px;
+  background: #333;
+  margin: 6px 0;
+}
 
-  nav.menu.open {
-    right: 0;
-  }
+nav.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  transition: all 0.3s;
+  z-index: 998;
+}
 
-  nav.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
+nav.menu.open {
+  right: 0;
+}
 
-  nav.menu ul li {
-    margin: 50px 0;
-  }
+nav.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
 
-  nav.menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 24px;
-  }
+nav.menu ul li {
+  margin: 50px 0;
+}
 
-  nav.menu ul li a:hover {
-    color: #fff;
-    background: #333;
-  }
+nav.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+}
+
+nav.menu ul li a:hover {
+  color: #fff;
+  background: #333;
+}
 
 
 .underlined {
@@ -456,175 +454,6 @@ h1 {
   line-height: 1;
   font-size: 200px;
   color: #333;
-}
-
-
-.bgLight {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 50;
-  opacity: 0;
-  position: fixed;
-}
-
-.bgLight__pos {
-  width: 100%;
-  height: 115vh;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  position: absolute;
-  top: -4.86111vw
-}
-
-.bgLight__one {
-  background-position: 0 0 !important;
-  margin-left: -20.13889vw;
-  background: url("~assets/img/img_17.png");
-  -webkit-animation: blinkLight 10s linear 20;
-  animation: blinkLight 10s linear 20;
-  animation-iteration-count: infinite;
-}
-
-.bgLight__two {
-  background-position: 100% 0 !important;
-  margin-left: 23.61111vw;
-  background: url("~assets/img/img_17.png");
-  -webkit-animation: blinkLight 15s linear 15;
-  animation: blinkLight 15s linear 15;
-  animation-iteration-count: infinite;
-}
-
-.bgLight__three {
-  background-position: top !important;
-  margin-left: 1.73611vw;
-  background: url("~assets/img/img_17.png");
-  -webkit-animation: blinkLight 20s linear 20;
-  animation: blinkLight 20s linear 20;
-  animation-iteration-count: infinite;
-}
-
-.bgLight {
-  opacity: 1;
-}
-
-
-@-webkit-keyframes blinkLight {
-  0% {
-    opacity: .4
-  }
-
-  5% {
-    opacity: .5
-  }
-
-  10% {
-    opacity: .6
-  }
-
-  15% {
-    opacity: .85
-  }
-
-  25% {
-    opacity: .5
-  }
-
-  30% {
-    opacity: 1
-  }
-
-  35% {
-    opacity: .1
-  }
-
-  40% {
-    opacity: .25
-  }
-
-  45% {
-    opacity: .5
-  }
-
-  60% {
-    opacity: 1
-  }
-
-  70% {
-    opacity: .85
-  }
-
-  80% {
-    opacity: .4
-  }
-
-  90% {
-    opacity: .5
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
-@keyframes blinkLight {
-  0% {
-    opacity: .4
-  }
-
-  5% {
-    opacity: .5
-  }
-
-  10% {
-    opacity: .6
-  }
-
-  15% {
-    opacity: .85
-  }
-
-  25% {
-    opacity: .5
-  }
-
-  30% {
-    opacity: 1
-  }
-
-  35% {
-    opacity: .1
-  }
-
-  40% {
-    opacity: .25
-  }
-
-  45% {
-    opacity: .5
-  }
-
-  60% {
-    opacity: 1
-  }
-
-  70% {
-    opacity: .85
-  }
-
-  80% {
-    opacity: .4
-  }
-
-  90% {
-    opacity: .5
-  }
-
-  to {
-    opacity: 1
-  }
 }
 
 
