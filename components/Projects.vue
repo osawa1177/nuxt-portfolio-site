@@ -1,24 +1,37 @@
 <template>
-  <div class="container-projects">
-    <div class="title" id="projects">Projects</div>
-    <h2 class="text-grey-1 text-center text-7xl my-24">
-      フロントエンドCSS設計、モダンな開発環境を使用してプロジェクトを実装しています。
-    </h2>
-    <div class="relative">
-      <img class="absolute inset-0 w-full" src="~/assets/img/macbookpro.png">
-      <div class="mx-32 relative z-1 text-center pt-6">
-        <div class="w-full divice">
-          <img src="~/assets/img/img.png" class=" py-2 fade-down"/>
-          <img src="~/assets/img/img_1.png" class="py-2 fade-down"/>
-          <img src="~/assets/img/img_2.png" class=" py-2 fade-down"/>
-          <img src="~/assets/img/img_3.png" class=" py-2 fade-down"/>
-          <img src="~/assets/img/img_4.png" class=" py-2 fade-down"/>
-          <img src="~/assets/img/img_5.png" class="py-2 fade-down"/>
-        </div>
-      </div>
+  <main>
+    <div class="bgLight">
+      <div class="bgLight__pos bgLight__one"></div>
+      <div class="bgLight__pos bgLight__two"></div>
+      <div class="bgLight__pos bgLight__three"></div>
     </div>
-  </div>
+    <div class="c-container">
+      <div class="c-page__title">
+        <span class="c-page__headline">Latest projects</span>
+        <h1 class="c-page__content">これまでのプロジェクトで手がけたWebサイトやアプリのデザインの一覧です</h1>
+        <p class="c-page__text">これまでに携わったプロジェクトの中で制作したWebサイトやアプリのデザインの一部をぜひご覧ください。</p>
+      </div>
+
+      <section class="p-projects__wrap">
+        <div v-for="project in projects" :key="project.slug" v-if="project && project.show" class="p-projects__project p-projects__project-active">
+          <nuxt-link :to="`/projects/${project.slug}`" class="p-projects__project-link">
+            <div class="p-projects__project-image">
+              <div class="p-projects__project-wrap">
+                <img :src="`/img/${project.img}`" alt="Project Image">
+              </div>
+            </div>
+            <div class="p-projects__project-details">
+              <div class="p-projects__project-tags"><span class="p-projects__tag">{{ project.tag }}</span></div>
+              <div class="p-projects__project-link">{{ project.title }}</div>
+              <div class="p-projects__project-description">{{ project.description }}</div>
+            </div>
+          </nuxt-link>
+        </div>
+      </section>
+    </div>
+  </main>
 </template>
+
 <script>
 import {gsap} from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
@@ -28,125 +41,223 @@ if (process.client) {
 }
 
 export default {
-  mounted() {
-    this.scrollItemC()
+  name: 'Design2',
+  props: {
+    projects: {
+      type: Array,
+      required: true
+    }
   },
+
+
   methods: {
-    scrollItemC() {
-      gsap.from('.fade-down', {
+    projectsItem() {
+      gsap.to(".p-projects__project-active", {
+        opacity: 1,
         scrollTrigger: {
-          trigger: ".fade-down",
+          trigger: ".p-projects__project-active",
+          start: "top 70",
+          end: "bottom 10",
           scrub: true,
-          start: "top 80%",
-          end: "bottom 40%",
-        },
-        scale: 2,
-        y: -10,
-        opacity: 0,
-        stagger: 0.13
-      })
-
+        }
+      });
     },
-
-
   }
 }
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/scss/foundation/_bglight.scss';
 
-.container-projects {
-  max-width: 1320px;
-  margin: 0 auto;
-  width: 100%;
-  padding-top: 11.25rem;
-}
 
-.title {
-  font-size: 4rem;
-  margin-left: 5rem;
-  margin-bottom: 2rem;
+.p-projects {
 
-  @include sp {
-    font-size: 3rem;
-    margin-left: 2rem;
+  &__wrap {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    @include sp {
+      flex-direction: column;
+    }
   }
-}
 
-.divice {
-  text-align: center;
-  padding-top: 2rem;
-  min-height: 85vh;
-  padding-left: 2rem;
-}
-
-
-.py-2 {
-  padding-bottom: 2.5rem;
-  width: 450px;
-}
-.w-full {
-  width: 90%;
-  margin: 0 auto;
-
-  @include sp {
+  &__list-grid {
     width: 100%;
-    margin: 0 auto;
-    padding: 24px
+
+    @media(max-width: 767px) {
+      grid-template-columns:1fr
+    }
   }
-}
-.z-1 {
-  z-index: 1;
-}
 
-.relative {
-  position: relative;
-}
-.inset-0 {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-.my-24 {
-  margin-bottom: 4rem!important;
-}
-.absolute {
-  position: absolute;
+  &__project {
+    position: relative;
+    overflow: hidden;
+    transform: translateY(100px);
+    transform-origin: 50% 100%;
+    opacity: 0;
+    transition: all 1s;
+    flex: 1;
+    flex-basis: 35%;
+    max-width: 550px;
+    max-height: 761px;
 
-  @include sp {
-    display: none;
+    @include sp {
+     overflow: visible;
+    }
+    &:last-of-type {
+      max-width: 549px;
+    }
   }
-}
 
-a:hover {
-  opacity: 0.6;
-}
+  &__project-link {
+    font-size: 20px;
+    font-weight: 600;
 
-.z-1 {
-  z-index: 1;
-}
-.pt-6 {
-  padding-top: 6rem;
-
-  @include sp {
-    padding: 0;
+    @include sp {
+      font-size: 16px;
+    }
   }
-}
 
+  &__project-image {
+    position: relative;
+    border: 0;
+    padding-top: 96%;
+    height: 0;
+    transition: all .5s;
 
-.text-grey-1 {
-  color: $white60;
-  line-height: 1.5;
-  margin-left: 5rem;
-  font-weight: 300;
-  font-size: 1.5rem;
-
-  @include sp {
-    margin: 24px;
-    margin-bottom: 0!important;
+    @media(max-width: 767px) {
+      transform: none;
+      opacity: 1
+    }
   }
-}
 
+  &__project-image img {
+    width: 100%
+  }
+
+  &__tag {
+    border: 1px solid #fff;
+    padding: 4px 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  &__project:hover &__project-image {
+    transform: scale(1.02)
+  }
+
+  &__project-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+  }
+
+  &__project-title {
+    font-size: 3.75rem;
+    font-weight: 500;
+  }
+
+  &__project-details {
+    position: relative;
+    padding: 0 8px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__project-description {
+    font-size: 16px;
+    margin-bottom: 1rem;
+    line-height: 1.65;
+    font-weight: 100;
+
+    @include sp {
+      font-size: 16px;
+    }
+  }
+
+  &__project__tag {
+    font-size: 1rem;
+    color: #fff;
+    margin-right: 1rem;
+    position: relative;
+    border: 1px solid #fff;
+    padding: 4px 8px;
+    text-align: center;
+  }
+
+  &__project--large {
+    grid-column: span 2;
+
+    @media(max-width: 767px) {
+      grid-column: span 1
+    }
+  }
+
+  &__project--large &__project-image {
+    padding-top: 54%
+  }
+
+  &__project--large &__project-details {
+    top: 7%;
+    bottom: auto;
+    right: 55%;
+    left: 0;
+    position: absolute;
+  }
+
+  @media(max-width: 767px) {
+
+    &__project-image {
+      padding-top: 96%
+    }
+
+    &__project-details {
+      padding: 0 1rem 2rem
+    }
+
+    &__project--large &__project-image {
+      padding-top: 120%
+    }
+
+    &__project--large &__project-wrap {
+      left: 0;
+      right: 0
+    }
+
+    &__project--large &__project-details {
+      position: relative;
+      top: 0;
+      right: 0;
+      left: 0
+    }
+  }
+
+  &__project-active {
+    transform: none;
+    opacity: 1
+  }
+
+  &__tags .button {
+    margin: 0 1.5rem 1.5rem 0
+  }
+
+  @media(max-width: 767px) {
+    &__tags {
+      white-space: nowrap;
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-left: 15px;
+      overflow: hidden;
+      overflow-x: scroll
+    }
+  }
+
+}
 
 </style>

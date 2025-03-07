@@ -26,7 +26,7 @@
 </template>
 
 
-<style scoped>
+<style lang="scss" scoped>
 
 
 .section.footer-smaller .container, .section.footer-smaller {
@@ -37,6 +37,10 @@
   line-height: normal;
   margin-top: 11.25rem;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+  @include sp {
+    margin-top: 0
+  }
 }
 
 .footer .container {
@@ -113,3 +117,5 @@
   flex-flow: column;
 }
 </style>
+<script setup>
+</script>

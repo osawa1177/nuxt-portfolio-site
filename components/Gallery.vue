@@ -75,7 +75,7 @@ export default {
 
       const size = Math.max(innerWidth, innerHeight);
       gsap.set('.gridBlock', {
-        backgroundImage: "~assets/img/img.png"
+        backgroundImage: "~assets/img/figma.png"
       });
 
         gsap.to(".centerPiece .gridBlock", {

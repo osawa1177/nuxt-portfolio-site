@@ -44,17 +44,16 @@
     <Services/>
     <Design/>
     <Development/>
-    <Projects/>
+    <Projects :projects="projects" />
 
-
-    <div class="button__wrap">
+<!--    <div class="button__wrap">
       <nuxt-link to="/projects" class="more fadeonscroll mouse-attract button button-undefined active">
       <span class="button-inner mouse-target">
         <span class="button-fill"></span>
       <span class="button-caption">View More</span>
     </span>
       </nuxt-link>
-    </div>
+    </div>-->
     <ToolSkill/>
 
     <!--    <ul>-->
@@ -69,6 +68,7 @@
 </template>
 <script>
 import axios from 'axios'
+import Design2 from '@/components/Projects.vue';
 
 export default {
   async asyncData() {
@@ -81,6 +81,22 @@ export default {
       }
     )
     return data
+  },
+  components: {
+    Design2
+  },
+  data() {
+    return {
+      projects: []
+    };
+  },
+  async created() {
+    try {
+      const response = await fetch('/content/projects.json');
+      this.projects = await response.json();
+    } catch (error) {
+      console.error('Failed to load projects:', error);
+    }
   }
 
 }

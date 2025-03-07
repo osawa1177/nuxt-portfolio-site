@@ -82,17 +82,29 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/scss/foundation/_bglight.scss';
 
-.content {
-  max-width: 1020px;
-  margin: 0 auto;
-  padding: 0 6.5rem;
-  box-sizing: border-box;
-  width: 100%;
+.c-page {
+  &__headline {
+    font-size: 14px;
+    font-weight: 400;
+    color: #26A0F8;
 
-  @include sp {
-    font-size: 20px;
+    @include sp {
+      font-size: 16px;
+    }
   }
 }
+  .content {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 6.5rem;
+    box-sizing: border-box;
+    width: 100%;
+
+    @include sp {
+      font-size: 20px;
+      padding: 0 16px
+    }
+  }
 
 .c-page__title {
   padding: 20vh 0 3.2rem;
@@ -136,25 +148,49 @@ export default {
   margin: 40px auto;
   border-bottom: 1px solid #ccc;
   padding-bottom: 82px;
+
+  @include sp {
+    padding: 0;
+    margin: 16px 16px;
+    padding-bottom: 24px;
+    gap: 8px;
+  }
 }
 
 .c-page__block {
   display: flex;
   flex-direction: column;
   font-size: 24px;
+
+  @include sp {
+    font-size: 16px;
+    flex: 1;
+  }
 }
 
 .c-page__data {
   font-size: 24px;
+
+  @include sp{
+    font-size: 20px;
+  }
 }
 
 .c-page__title {
   font-size: 28px;
+
+  @include sp{
+    font-size: 20px;
+  }
 }
 
 .c-page__project-title {
   font-size: 28px;
   margin-top: 8px;
+
+  @include sp {
+    font-size: 20px;
+  }
 }
 
 .c-page__project-text {
@@ -166,6 +202,12 @@ export default {
   margin: 40px auto;
   max-width: 810px;
   box-sizing: border-box;
+
+  img {
+    @include sp {
+      width: 100%;
+    }
+  }
 }
 .c-page__project-text-list {
   font-size: 16px;

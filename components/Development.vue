@@ -121,7 +121,6 @@ export default {
   width: 100%;
   height: 100vh;
   display: flex;
-  margin-bottom: 20rem;
   margin-left: -5%;
 }
 

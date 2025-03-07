@@ -19,7 +19,7 @@
             <img src="~/assets/img/toolskill/css.png"/>
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-80">
+            <div class="chart-item chart-90">
             </div>
           </div>
           <div class="tool-skill-name">CSS</div>
@@ -29,7 +29,7 @@
             <img src="~/assets/img/toolskill/photoshop.png"/>
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-70">
+            <div class="chart-item chart-50">
             </div>
           </div>
           <div class="tool-skill-name">Photoshop</div>
@@ -46,7 +46,7 @@
         </div>
         <div class="tool-skill-item ">
           <div class="tool-skill-img">
-            <img src="~/assets/img/toolskill/xd.png"/>
+            <img src="~/assets/img/toolskill/xd.png"class="tool-skill-xd"/>
           </div>
           <div class="chart-block">
             <div class="chart-item chart-80">
@@ -56,10 +56,21 @@
         </div>
         <div class="tool-skill-item ">
           <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/figma.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-90">
+            </div>
+          </div>
+          <div class="tool-skill-name">Figma</div>
+        </div>
+
+        <div class="tool-skill-item ">
+          <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/javascript.png"/>
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-60">
+            <div class="chart-item chart-70">
             </div>
           </div>
           <div class="tool-skill-name">javascript</div>
@@ -79,7 +90,7 @@
             <img src="~/assets/img/toolskill/vue.png"/>
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-50">
+            <div class="chart-item chart-80">
             </div>
           </div>
           <div class="tool-skill-name">Vue.js</div>
@@ -89,7 +100,7 @@
             <img src="~/assets/img/toolskill/wordpress.png"/>
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-60">
+            <div class="chart-item chart-30">
             </div>
           </div>
           <div class="tool-skill-name">Wordpress</div>
@@ -99,7 +110,7 @@
             <img src="~/assets/img/toolskill/git.png"/>
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-70">
+            <div class="chart-item chart-80">
             </div>
           </div>
           <div class="tool-skill-name">Git</div>
@@ -112,14 +123,14 @@
             <div class="chart-item chart-80">
             </div>
           </div>
-          <div class="tool-skill-name">Bootstrap 3 / 4</div>
+          <div class="tool-skill-name">Bootstrap4</div>
         </div>
         <div class="tool-skill-item ">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/sass.png"/>
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-80">
+            <div class="chart-item chart-60">
             </div>
           </div>
           <div class="tool-skill-name">Scss</div>
@@ -146,20 +157,10 @@
         </div>
         <div class="tool-skill-item ">
           <div class="tool-skill-img">
-            <img src="~/assets/img/toolskill/googleanalytics.png"/>
-          </div>
-          <div class="chart-block">
-            <div class="chart-item chart-70">
-            </div>
-          </div>
-          <div class="tool-skill-name">Googleanalytics</div>
-        </div>
-        <div class="tool-skill-item ">
-          <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/seo.png"/>
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-70">
+            <div class="chart-item chart-50">
             </div>
           </div>
           <div class="tool-skill-name">SEO</div>
@@ -169,7 +170,7 @@
             <img src="~/assets/img/toolskill/design.png"/>
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-80">
+            <div class="chart-item chart-70">
             </div>
           </div>
           <div class="tool-skill-name">UI/UXデザイン</div>
@@ -179,7 +180,7 @@
             <img src="~/assets/img/toolskill/backlog.png"/>
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-80">
+            <div class="chart-item chart-90">
             </div>
           </div>
           <div class="tool-skill-name">Backlog</div>
@@ -227,12 +228,23 @@ export default {
 .title {
   font-size: 4rem;
   margin-left: 5rem;
+
+  @include sp {
+    text-align: center;
+    margin: 0;
+  }
 }
 
 .tool-skill-block {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include sp {
+    gap: 8px;
+    margin: 0 auto;
+    justify-content: center;
+  }
 }
 
   .chart-block {
@@ -316,7 +328,6 @@ export default {
 
   .tool-skill-item {
     width: 21.5%;
-    margin-bottom: 1.5em;
     padding: 1.6em 0.8em 1.3em;
     text-align: center;
     font-weight: bold;
@@ -327,6 +338,10 @@ export default {
     text-decoration: none;
     transition: 0.2s;
     color: $white;
+
+    @include sp {
+      padding: 8px 0 8px;
+    }
 
     &:hover {
       box-shadow: 0 10px 15px -5px $black12;
@@ -345,10 +360,18 @@ export default {
     margin: 0 auto 1em;
   }
 
+  .tool-skill-xd {
+    border-radius: 11px;
+  }
+
   .tool-skill-name {
     line-height: 1.4;
     font-size: 0.95em;
     margin-top: .5rem;
+
+    @include sp {
+      font-size: 10px;
+    }
   }
 
   .skills {
@@ -360,7 +383,7 @@ export default {
     width: 100%;
 
     @include sp {
-      padding-top: 58px;
+      padding-top: 48%;
     }
   }
 
