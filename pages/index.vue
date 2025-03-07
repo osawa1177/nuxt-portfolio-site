@@ -387,7 +387,7 @@ h1 {
 .video {
   display: block;
   width: 100%;
-  height: 600px;
+  height: 90vh;
   object-fit: cover;
   position: absolute;
   top: 0;
