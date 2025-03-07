@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "osawa-portfolio"
-  }
+    "default": "osawa-portfolio",
+    "e": "osawa-portfolio"
+  },
+  "targets": {},
+  "etags": {}
 }
