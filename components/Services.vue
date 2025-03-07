@@ -1,6 +1,6 @@
 <template>
   <div class="intro">
-    <h1 class="intro__text">2014年からWebサイトの設計、構築、運用、保守を行っています。企画・アイデアから実装まで、サイトやアプリのサービス全体を通してデザイン、開発しています</h1>
+    <h1 class="intro__text">Webサイトの設計、構築、運用、保守を行っています。企画・アイデアから実装まで、サイトやアプリのサービス全体を通してデザイン、開発をしています</h1>
     <h1 class="intro__text-ios">Design</h1>
   </div>
 </template>
