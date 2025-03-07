@@ -10,17 +10,18 @@
     "deploy": "yarn build && firebase deploy --only hosting --project=osawa-portfolio"
   },
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.4",
+    "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "core-js": "^3.8.3",
     "fibers": "^5.0.0",
-    "node-sass": "4.14.1",
     "nuxt": "2.15.8",
-    "@babel/plugin-proposal-private-property-in-object": "^7.16.4",
+    "sass": "^1.85.1",
     "sass-loader": "10"
   },
   "devDependencies": {
-    "gsap": "^3.3.4",
-    "@babel/plugin-proposal-private-property-in-object": "^7.16.4"
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.4",
+    "gsap": "^3.3.4"
   }
 }
