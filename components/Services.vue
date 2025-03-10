@@ -1,19 +1,19 @@
 <template>
   <div class="intro">
-    <h1 class="intro__text">Webサイトの設計、構築、運用、保守を行っています。企画・アイデアから実装まで、サイトやアプリのサービス全体を通してデザイン、開発をしています</h1>
+    <h1 class="intro__text">
+      Webサイトの設計、構築、運用、保守を行っています。企画・アイデアから実装まで、<br />サイトやアプリのサービス全体を通してデザイン、開発をしています
+    </h1>
     <h1 class="intro__text-ios">Design</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "services"
-}
+  name: "services",
+};
 </script>
 
 <style lang="scss" scoped>
-
-
 .intro {
   max-width: 1320px;
   margin: 0 auto;
@@ -32,9 +32,11 @@ export default {
 .intro__text {
   font-size: 2rem;
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.5;
   text-align: left;
-  margin: 11.25rem 0 5rem 5rem;
+  margin: 11.25rem auto 48px;
+  text-align: center;
+  width: 74%;
 
   @include sp {
     font-size: 1.5rem;
@@ -45,13 +47,11 @@ export default {
 
 .intro__text-ios {
   margin: 10px auto 0 auto;
-  font-size: 200px;
+  font-size: 140px;
   color: #333;
 
   @include sp {
     font-size: 120px;
   }
-
 }
-
 </style>
