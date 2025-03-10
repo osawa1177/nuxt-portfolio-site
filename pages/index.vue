@@ -1,5 +1,4 @@
 <template>
-
   <div class="content__hero">
     <div class="menu-toggle">
       <div class="one"></div>
@@ -18,11 +17,11 @@
     </nav>
 
     <script>
-      var toggle = document.querySelector('.menu-toggle');
-      var menu = document.querySelector('.menu');
+      var toggle = document.querySelector(".menu-toggle");
+      var menu = document.querySelector(".menu");
 
-      toggle.addEventListener('click', function () {
-        menu.classList.toggle('open');
+      toggle.addEventListener("click", function () {
+        menu.classList.toggle("open");
       });
     </script>
     <section class="section hero">
@@ -37,25 +36,26 @@
         <div class="bgLight__pos bgLight__two"></div>
         <div class="bgLight__pos bgLight__three"></div>
       </div>
-
     </section>
 
-    <Gallery/>
-    <Services/>
-    <Design/>
-    <Development/>
-    <Projects/>
-
+    <Gallery />
+    <Services />
+    <Design />
+    <Development />
+    <Projects />
 
     <div class="button__wrap">
-      <nuxt-link to="/projects" class="more fadeonscroll mouse-attract button button-undefined active">
-      <span class="button-inner mouse-target">
-        <span class="button-fill"></span>
-      <span class="button-caption">View More</span>
-    </span>
+      <nuxt-link
+        to="/projects"
+        class="more fadeonscroll mouse-attract button button-undefined active"
+      >
+        <span class="button-inner mouse-target">
+          <span class="button-fill"></span>
+          <span class="button-caption">View More</span>
+        </span>
       </nuxt-link>
     </div>
-    <ToolSkill/>
+    <ToolSkill />
 
     <!--    <ul>-->
     <!--      <li v-for="content in contents" :key="content.id">-->
@@ -65,29 +65,27 @@
     <!--      </li>-->
     <!--    </ul>-->
   </div>
-
 </template>
 <script>
-import axios from 'axios'
+import axios from "axios";
 
 export default {
   async asyncData() {
-    const {data} = await axios.get(
+    const { data } = await axios.get(
       // your-service-id部分は自分のサービスidに置き換えてください
-      'https://portfolio07.microcms.io/api/v1/blog',
+      "https://portfolio07.microcms.io/api/v1/blog",
       {
         // your-api-key部分は自分のapi-keyに置き換えてください
-        headers: {'X-MICROCMS-API-KEY': '30183846baae4f1b83f172788a157b38e70a'}
+        headers: {
+          "X-MICROCMS-API-KEY": "30183846baae4f1b83f172788a157b38e70a",
+        },
       }
-    )
-    return data
-  }
-
-}
+    );
+    return data;
+  },
+};
 </script>
 <style lang="scss" scoped>
-
-
 .menu-toggle {
   width: 40px;
   height: 40px;
@@ -142,64 +140,90 @@ nav.menu ul li a:hover {
   background: #333;
 }
 
-
 .underlined {
   position: relative;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 3.5rem;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.3;
   margin: 0 0 7rem;
-  letter-spacing: -.02em;
 
   @include sp {
     margin: 0 0 0.5rem;
   }
 }
 
-.underlined:after, .underlined:before {
+.underlined:after,
+.underlined:before {
   position: absolute;
   width: 100%;
   height: 11px;
   bottom: -10px;
   left: 0;
   background: var(--text);
-  content: ""
+  content: "";
+  animation: underlined-link_movemask__GvadX 5s linear infinite;
 }
 
 .underlined:after {
-  transition: all .6s;
-  background: linear-gradient(190.05deg, #98e8fc -16.32%, #1fa9ff 56.32%, #8980f6 115.25%)
+  transition: all 0.6s;
+  background: linear-gradient(
+    190.05deg,
+    #98e8fc -16.32%,
+    #1fa9ff 56.32%,
+    #8980f6 115.25%
+  );
+}
+
+@keyframes underlined-link_movemask__GvadX {
+  0% {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 114px 0;
+    mask-position: 114px 0;
+  }
 }
 
 .underlined:before {
-  opacity: .2
+  opacity: 0.2;
 }
 
 .underlined:hover {
-  color: var(--text)
+  color: var(--text);
 }
 
-.underlined:hover:after, .underlined:hover:before {
+.underlined:hover:after,
+.underlined:hover:before {
   animation: movemask 2s linear infinite;
 }
 
 .underlined:hover:after {
   width: 100%;
-  transition-timing-function: cubic-bezier(.2, 0, 0, 1);
-  background: linear-gradient(190.05deg, #98e8fc -16.32%, #1fa9ff 56.32%, #8980f6 115.25%)
+  transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  background: linear-gradient(
+    190.05deg,
+    #98e8fc -16.32%,
+    #1fa9ff 56.32%,
+    #8980f6 115.25%
+  );
 }
 
-.underlined_angular:after, .underlined_angular:before {
+.underlined_angular:after,
+.underlined_angular:before {
   -webkit-mask: url("~assets/img/toolskill/angular.svg");
   mask: url("~assets/img/toolskill/angular.svg");
 }
 
-.underlined_dashed:after, .underlined_dashed:before {
+.underlined_dashed:after,
+.underlined_dashed:before {
   -webkit-mask: url("~assets/img/toolskill/dashed.svg");
   mask: url("~assets/img/toolskill/dashed.svg");
 }
 
-.underlined_waved:after, .underlined_waved:before {
+.underlined_waved:after,
+.underlined_waved:before {
   -webkit-mask: url("~assets/img/toolskill/waved.svg");
   mask: url("~assets/img/toolskill/waved.svg");
 }
@@ -207,12 +231,12 @@ nav.menu ul li a:hover {
 @keyframes movemask {
   0% {
     -webkit-mask-position: 0 0;
-    mask-position: 0 0
+    mask-position: 0 0;
   }
 
   to {
     -webkit-mask-position: 114px 0;
-    mask-position: 114px 0
+    mask-position: 114px 0;
   }
 }
 
@@ -227,19 +251,19 @@ nav.menu ul li a:hover {
   }
 }
 
-
 .button {
   position: relative;
   outline: none;
   cursor: pointer;
   border: 0;
   background: none;
-  border-radius: 30px
+  border-radius: 30px;
 }
 
-.button, .button-inner {
+.button,
+.button-inner {
   display: inline-block;
-  transition: all .5s;
+  transition: all 0.5s;
   position: relative;
 }
 
@@ -255,7 +279,7 @@ nav.menu ul li a:hover {
   border: 1px solid $white;
   overflow: hidden;
   border-radius: 55px;
-  vertical-align: top
+  vertical-align: top;
 }
 
 .button-inner:before {
@@ -267,39 +291,43 @@ nav.menu ul li a:hover {
   border-radius: 30px;
   opacity: 0;
   content: "";
-  transition: all .5s
+  transition: all 0.5s;
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .button-inner {
-    font-size: 1.143rem
+    font-size: 1.143rem;
   }
 }
 
-.button:focus, .button:hover {
-  -webkit-animation: scale .5s linear 1;
-  animation: scale .5s linear 1;
-  -webkit-animation-delay: .1s;
-  animation-delay: .1s
+.button:focus,
+.button:hover {
+  -webkit-animation: scale 0.5s linear 1;
+  animation: scale 0.5s linear 1;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
-.button:focus .button-fill:before, .button:hover .button-fill:before {
-  transform: scale(2.2)
+.button:focus .button-fill:before,
+.button:hover .button-fill:before {
+  transform: scale(2.2);
 }
 
 .button:disabled {
-  opacity: .4;
-  pointer-events: none
+  opacity: 0.4;
+  pointer-events: none;
 }
 
-.button:focus, .button:hover .button-inner {
+.button:focus,
+.button:hover .button-inner {
   border-color: transparent;
   color: $white;
-  transition-duration: .2s
+  transition-duration: 0.2s;
 }
 
-.button:focus:before, .button:hover .button-inner:before {
-  opacity: 1
+.button:focus:before,
+.button:hover .button-inner:before {
+  opacity: 1;
 }
 
 .button.selected .button-inner {
@@ -313,26 +341,26 @@ nav.menu ul li a:hover {
 
 .button-caption {
   position: relative;
-  z-index: 1
+  z-index: 1;
 }
 
 .button-block {
   width: 100%;
-  display: block
+  display: block;
 }
 
 .button-block .button-inner {
-  display: block
+  display: block;
 }
 
 .button-filled .button-inner {
   color: $white;
-  border: 0
+  border: 0;
 }
 
 .button-filled .button-inner:before {
   background: $black;
-  opacity: 1
+  opacity: 1;
 }
 
 .button-filled:hover .button-inner:before {
@@ -340,10 +368,10 @@ nav.menu ul li a:hover {
 }
 
 .button-small {
-  font-size: .875rem;
+  font-size: 0.875rem;
   padding: 5px 20px;
   color: $primary;
-  border-radius: 12px
+  border-radius: 12px;
 }
 
 .button-fill {
@@ -352,23 +380,29 @@ nav.menu ul li a:hover {
   left: 50%;
   width: 100%;
   padding-top: 100%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
 }
 
 .button-fill:before {
   position: absolute;
   top: 0;
   content: "";
-  background: linear-gradient(190.05deg, #98e8fc -16.32%, #1fa9ff 56.32%, #8980f6 115.25%);
+  background: linear-gradient(
+    190.05deg,
+    #98e8fc -16.32%,
+    #1fa9ff 56.32%,
+    #8980f6 115.25%
+  );
   border-radius: 50%;
-  transform: scale(0)
+  transform: scale(0);
 }
 
-.button-fill:before, .cookies-notification {
+.button-fill:before,
+.cookies-notification {
   left: 0;
   right: 0;
   bottom: 0;
-  transition: all .5s
+  transition: all 0.5s;
 }
 
 .caption {
@@ -432,7 +466,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  transition: all .5s;
+  transition: all 0.5s;
   object-fit: cover;
   z-index: -1;
 }
@@ -445,7 +479,7 @@ h1 {
   width: 100%;
   height: 100%;
   opacity: 0.6;
-  transition: all .5s;
+  transition: all 0.5s;
   z-index: -1;
 }
 
@@ -455,6 +489,4 @@ h1 {
   font-size: 200px;
   color: #333;
 }
-
-
 </style>
