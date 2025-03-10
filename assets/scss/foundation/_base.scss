@@ -13,6 +13,7 @@ body, html {
   width: 100%;
   color: $white;
   background: $black;
+  font-feature-settings: "palt";
 }
 
 
@@ -84,7 +85,6 @@ h1 {
   font-weight: 500;
   line-height: 3.5rem;
   margin: 0 0 7rem;
-  letter-spacing: -.02em
 }
 
 h2 {
