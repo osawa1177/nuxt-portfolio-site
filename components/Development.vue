@@ -5,57 +5,64 @@
         <div class="phone3">Development</div>
       </div>
       <div class="text">
-        <h1>目を引く印象的な動きとユーザーエクスペリエンスを作成することにより、ユーザーとの最適な視覚的体験を構築します。</h1>
+        <h1>
+          目を引く印象的な動きとユーザーエクスペリエンスを作成することにより、ユーザーとの最適な視覚的体験を構築します。
+        </h1>
         <div class="home-services-details">
           <div class="home-service">
             <h3>ウェブサイトとプラットフォーム</h3>
-            <p>クライアントのビジネスに合わせたWebサイトを構築します。お問い合わせに繋がるランディングページや複雑な管理画面などあらゆるパターンに対応します。</p>
+            <p>
+              クライアントのビジネスに合わせたWebサイトを構築します。お問い合わせに繋がるランディングページや複雑な管理画面などあらゆるパターンに対応します。
+            </p>
           </div>
           <div class="home-service">
             <h3>レスポンシブデザイン</h3>
-            <p>様々なデバイスに応じた最適なデザインの開発を行います。またデザイン性のみならず、運営側の視点から、サイトのメンテナンス性、更新性、またデバイス間を越えた効率的な分析を実現するためにも、それぞれのデバイスに最適なサイト構築を行います。</p>
+            <p>
+              様々なデバイスに応じた最適なデザインの開発を行います。またデザイン性のみならず、運営側の視点から、サイトのメンテナンス性、更新性、またデバイス間を越えた効率的な分析を実現するためにも、それぞれのデバイスに最適なサイト構築を行います。
+            </p>
           </div>
           <div class="home-service">
             <h3>ブランド戦略</h3>
-            <p>クライアントの目的を達成するために、キャンペーンサイトや、アフェリエイト、バナーなど含めたグラフィックに至るまで各施策の方向性を統一し、一貫したコンセプト設計およびブランド戦略をサポートいたします。</p>
+            <p>
+              クライアントの目的を達成するために、キャンペーンサイトや、アフェリエイト、バナーなど含めたグラフィックに至るまで各施策の方向性を統一し、一貫したコンセプト設計およびブランド戦略をサポートいたします。
+            </p>
           </div>
           <div class="home-service text__last3">
             <h3>モダンな開発</h3>
-            <p>インパクトを与えるアニメーションや、ユーザーが操作をわかりやすくするためのインタラクションの実装など様々な構築をご提案します。</p>
+            <p>
+              インパクトを与えるアニメーションや、ユーザーが操作をわかりやすくするためのインタラクションの実装など様々な構築をご提案します。
+            </p>
           </div>
         </div>
-
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
-import {gsap} from 'gsap'
-import {ScrollTrigger} from 'gsap/ScrollTrigger'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 if (process.client) {
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 }
 
 export default {
   mounted() {
-    this.scrollItemC()
+    this.scrollItemC();
   },
   methods: {
     scrollItemC() {
-       gsap.timeline({
+      gsap.timeline({
         scrollTrigger: {
           trigger: ".phone3",
           start: "top 15%",
           end: "bottom 30%",
           endTrigger: ".text__last3",
           pin: ".phone3",
-        }
+        },
       });
       const textTitles = [...document.querySelectorAll("h1")];
-
 
       textTitles.forEach((title, i) => {
         gsap.to(title, {
@@ -65,19 +72,15 @@ export default {
             start: "top 70%",
             end: "bottom 10%",
             scrub: true,
-
-          }
+          },
         });
       });
     },
-
-
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-
 .home-services-details {
   display: flex;
   flex-flow: row wrap;
@@ -133,13 +136,12 @@ export default {
   background-size: contain;
   font-size: 4rem;
   padding-left: 5rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
 
   @include sp {
     font-size: 3.5rem;
-    padding: 0!important;
+    padding: 0 !important;
   }
-
 }
 
 .phone2 {
@@ -167,9 +169,10 @@ export default {
 .text h1 {
   opacity: 0;
   width: 90%;
-  padding-bottom: 40px;
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 56px;
 
   @include sp {
     width: 45%;
@@ -178,9 +181,15 @@ export default {
 }
 
 .home-service h3 {
-  font-size: 1.1rem;
+  font-size: 20px;
   font-weight: 600;
+  color: $blue400;
+  margin: 0 0 16px;
 }
 
-
+.home-service p {
+  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.6;
+}
 </style>

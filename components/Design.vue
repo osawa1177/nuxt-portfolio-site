@@ -5,57 +5,64 @@
         <div class="phone">Design</div>
       </div>
       <div class="text">
-        <h1>記憶に残るデザインと有効なユーザー体験をデザインすることで、ユーザーとの最適なアプローチを確立します。</h1>
+        <h1>
+          記憶に残るデザインと有効なユーザー体験をデザインすることで、ユーザーとの最適なアプローチを確立します。
+        </h1>
         <div class="home-services-details">
           <div class="home-service">
             <h3>ウェブサイトとプラットフォーム</h3>
-            <p>様々な規模のプロジェクトをデザインしています。シンプルなシングルページのウェブサイトであっても、多数のダッシュボードを備えた複雑な管理パネルなど、視覚的に美しく、一貫性があり、ユーザーフレンドリーなWebサイトを作成します。</p>
+            <p>
+              様々な規模のプロジェクトをデザインしています。シンプルなシングルページのウェブサイトであっても、多数のダッシュボードを備えた複雑な管理パネルなど、視覚的に美しく、一貫性があり、ユーザーフレンドリーなWebサイトを作成します。
+            </p>
           </div>
           <div class="home-service">
             <h3>モバイルアプリケーション</h3>
-            <p>単に美しいインターフェースをデザインするのではなく、各プラットフォームのガイドラインに沿って、ユーザーが直感的にアプリを利用できるように工夫しています。</p>
+            <p>
+              単に美しいインターフェースをデザインするのではなく、各プラットフォームのガイドラインに沿って、ユーザーが直感的にアプリを利用できるように工夫しています。
+            </p>
           </div>
           <div class="home-service">
             <h3>サービス全体のブランディング</h3>
-            <p>ロゴ、コーポレートサイト、ランディングページ、各種モックアップ、スタイルガイドなどを開発し、サービス全体を通してブランディングしていきます。</p>
+            <p>
+              ロゴ、コーポレートサイト、ランディングページ、各種モックアップ、スタイルガイドなどを開発し、サービス全体を通してブランディングしていきます。
+            </p>
           </div>
           <div class="home-service text__last">
-            <h3>デザインコンセプト</h3>
-            <p>サイトやモバイルアプリのデザインコンセプトを作って、インパクトや一貫性がある、デザインをさらに素晴らしいものにしていきます。</p></div>
+            <h3>デザインシステム</h3>
+            <p>
+              サイトやモバイルアプリのデザインシステムを作って、デザインの保守性や一貫性がある、デザインをさらに素晴らしいものにしていきます。
+            </p>
+          </div>
         </div>
-
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
-import {gsap} from 'gsap'
-import {ScrollTrigger} from 'gsap/ScrollTrigger'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 if (process.client) {
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 }
 
 export default {
   mounted() {
-    this.scrollItemC()
+    this.scrollItemC();
   },
   methods: {
     scrollItemC() {
-       gsap.timeline({
+      gsap.timeline({
         scrollTrigger: {
           trigger: ".phone",
           start: "top 15%",
           end: "bottom 30%",
           endTrigger: ".text__last",
-          pin: true
-
-        }
+          pin: true,
+        },
       });
       const textTitles = [...document.querySelectorAll("h1")];
-
 
       textTitles.forEach((title, i) => {
         gsap.to(title, {
@@ -67,20 +74,17 @@ export default {
             scrub: true,
             toggleClass: {
               targets: ".phone",
-              className: `phone${i - 1}`
-            }
-          }
+              className: `phone${i - 1}`,
+            },
+          },
         });
       });
     },
-
-
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-
 .home-services-details {
   display: flex;
   flex-flow: row wrap;
@@ -137,7 +141,6 @@ export default {
   background-size: contain;
   font-size: 4rem;
   padding-left: 5rem;
-  padding-top: 2rem;
 }
 
 .phone2 {
@@ -165,9 +168,10 @@ export default {
 .text h1 {
   opacity: 0;
   width: 90%;
-  padding-bottom: 40px;
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 56px;
 
   @include sp {
     width: 45%;
@@ -175,8 +179,15 @@ export default {
 }
 
 .home-service h3 {
-  font-size: 1.1rem;
+  font-size: 20px;
   font-weight: 600;
+  color: $blue400;
+  margin: 0 0 16px;
 }
 
+.home-service p {
+  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.6;
+}
 </style>
