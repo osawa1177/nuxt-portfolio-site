@@ -31,7 +31,7 @@ export default {
 
 .intro__text {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1.5;
   text-align: left;
   margin: 11.25rem auto 48px;
