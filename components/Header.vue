@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <a href="/" class="header-logo">
-      <span class="header-logo-img site-title"><img src="~/assets/img/logo.svg"/></span>
+      <span class="header-logo-img site-title"><img src="~/assets/img/logo.svg" /></span>
     </a>
     <div class="container">
       <ul class="header-menu">
@@ -15,10 +15,7 @@
   </header>
 </template>
 
-<script></script>
-
 <style lang="scss" scoped>
-
 .site-title {
   transition: width 0.25s ease-in-out 0.05s;
 
@@ -74,7 +71,8 @@
   }
 }
 
-.header-logo-img, .header-logo-text {
+.header-logo-img,
+.header-logo-text {
   position: absolute;
   top: 0;
   left: 0;
@@ -146,6 +144,4 @@
     display: none;
   }
 }
-
-
 </style>

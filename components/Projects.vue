@@ -9,14 +9,14 @@
         <img src="~/assets/img/projects/money-seminar.png" class="projects__img fade-down" />
         <div class="projects__text-block">
           <p class="projects__text-title">Money Seminar</p>
-          <span class="projects__text-caption">2024・Web Design</span>
+          <span class="projects__text-caption">2023・Web Design</span>
         </div>
       </a>
       <a href="/projects/rakuten-fire-insurance" class="projects__link-block">
         <img src="~/assets/img/projects/fire-estimate.png" class="projects__img fade-down" />
         <div class="projects__text-block">
           <p class="projects__text-title">火災保険一括見積もりフォーム</p>
-          <span class="projects__text-caption">2022・Web Design / UI</span>
+          <span class="projects__text-caption">2021・Web Design / UI</span>
         </div>
       </a>
       <a href="/projects/live-masq" class="projects__link-block">
@@ -44,7 +44,7 @@
         <img src="~/assets/img/projects/careerflight-app.png" class="projects__img fade-down" />
         <div class="projects__text-block">
           <p class="projects__text-title">Career Flight</p>
-          <span class="projects__text-caption">2020・UI Design / Develop</span>
+          <span class="projects__text-caption">2023・UI Design / Develop</span>
         </div>
       </a>
     </div>

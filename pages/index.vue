@@ -45,10 +45,7 @@
     <Projects />
 
     <div class="button__wrap">
-      <nuxt-link
-        to="/projects"
-        class="more fadeonscroll mouse-attract button button-undefined active"
-      >
+      <nuxt-link to="/projects" class="more fadeonscroll mouse-attract button button-undefined active">
         <span class="button-inner mouse-target">
           <span class="button-fill"></span>
           <span class="button-caption">View More</span>
@@ -64,27 +61,11 @@
     <!--        </nuxt-link>-->
     <!--      </li>-->
     <!--    </ul>-->
+
+
   </div>
 </template>
-<script>
-import axios from "axios";
 
-export default {
-  async asyncData() {
-    const { data } = await axios.get(
-      // your-service-id部分は自分のサービスidに置き換えてください
-      "https://portfolio07.microcms.io/api/v1/blog",
-      {
-        // your-api-key部分は自分のapi-keyに置き換えてください
-        headers: {
-          "X-MICROCMS-API-KEY": "30183846baae4f1b83f172788a157b38e70a",
-        },
-      }
-    );
-    return data;
-  },
-};
-</script>
 <style lang="scss" scoped>
 .menu-toggle {
   width: 40px;
@@ -94,6 +75,10 @@ export default {
   right: 15px;
   z-index: 999;
   cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-toggle div {
@@ -166,12 +151,10 @@ nav.menu ul li a:hover {
 
 .underlined:after {
   transition: all 0.6s;
-  background: linear-gradient(
-    190.05deg,
-    #98e8fc -16.32%,
-    #1fa9ff 56.32%,
-    #8980f6 115.25%
-  );
+  background: linear-gradient(190.05deg,
+      #98e8fc -16.32%,
+      #1fa9ff 56.32%,
+      #8980f6 115.25%);
 }
 
 @keyframes underlined-link_movemask__GvadX {
@@ -202,12 +185,10 @@ nav.menu ul li a:hover {
 .underlined:hover:after {
   width: 100%;
   transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
-  background: linear-gradient(
-    190.05deg,
-    #98e8fc -16.32%,
-    #1fa9ff 56.32%,
-    #8980f6 115.25%
-  );
+  background: linear-gradient(190.05deg,
+      #98e8fc -16.32%,
+      #1fa9ff 56.32%,
+      #8980f6 115.25%);
 }
 
 .underlined_angular:after,
@@ -387,12 +368,10 @@ nav.menu ul li a:hover {
   position: absolute;
   top: 0;
   content: "";
-  background: linear-gradient(
-    190.05deg,
-    #98e8fc -16.32%,
-    #1fa9ff 56.32%,
-    #8980f6 115.25%
-  );
+  background: linear-gradient(190.05deg,
+      #98e8fc -16.32%,
+      #1fa9ff 56.32%,
+      #8980f6 115.25%);
   border-radius: 50%;
   transform: scale(0);
 }
