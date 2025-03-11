@@ -1,9 +1,9 @@
 <template>
   <div class="intro">
-    <h1 class="intro__text">
+    <h2 class="intro__title">
       Webサイトの設計、構築、運用、保守を行っています。企画・アイデアから実装まで、<br />サイトやアプリのサービス全体を通してデザイン、開発をしています
-    </h1>
-    <h1 class="intro__text-ios">Design</h1>
+    </h2>
+    <h3 class="intro__text">Design / Engineer</h3>
   </div>
 </template>
 
@@ -27,31 +27,31 @@ export default {
     width: 90%;
     min-height: 0;
   }
-}
 
-.intro__text {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.5;
-  text-align: left;
-  margin: 11.25rem auto 48px;
-  text-align: center;
-  width: 74%;
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: left;
+    margin: 11.25rem auto 8px;
+    text-align: center;
+    width: 74%;
 
-  @include sp {
-    font-size: 1.5rem;
-    margin: auto;
-    padding: 40px;
+    @include sp {
+      font-size: 1.5rem;
+      margin: auto;
+      padding: 40px;
+    }
   }
-}
 
-.intro__text-ios {
-  margin: 10px auto 0 auto;
-  font-size: 140px;
-  color: #333;
+  &__text {
+    font-size: 80px;
+    color: #333;
+    text-align: center;
 
-  @include sp {
-    font-size: 120px;
+    @include sp {
+      font-size: 120px;
+    }
   }
 }
 </style>
