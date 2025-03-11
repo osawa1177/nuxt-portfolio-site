@@ -224,7 +224,7 @@ nav.menu ul li a:hover {
 .button__wrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 11.25rem;
+  margin-bottom: 72px;
 
   @include sp {
     margin-top: 50px;

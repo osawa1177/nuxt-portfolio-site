@@ -1,9 +1,9 @@
 <template>
   <div class="container-projects">
     <div class="title" id="projects">Projects</div>
-    <h2 class="text-grey-1 text-center text-7xl my-24">
-      フロントエンド、CSS設計、モダンな開発環境を使用してプロジェクトを実装しています。
-    </h2>
+    <p class="projects__text">
+      デザイン、フロントエンド、CSS設計、モダンな開発環境を使用してプロジェクトを実装しています。
+    </p>
     <div class="projects__wrap">
       <a href="/projects/rakuten-money-seminar" class="projects__link-block">
         <img src="~/assets/img/projects/money-seminar.png" class="projects__img fade-down" />
@@ -83,7 +83,7 @@ export default {
 
 <style lang="scss" scoped>
 .container-projects {
-  max-width: 1320px;
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
   padding-top: 11.25rem;
@@ -91,12 +91,10 @@ export default {
 
 .title {
   font-size: 4rem;
-  margin-left: 5rem;
   margin-bottom: 32px;
 
   @include sp {
     font-size: 3rem;
-    margin-left: 2rem;
   }
 }
 
@@ -118,7 +116,6 @@ export default {
 
 .text-grey-1 {
   color: $white60;
-  margin-left: 5rem;
   font-weight: 600;
   font-size: 16px;
 
@@ -130,7 +127,7 @@ export default {
 
 .projects {
   &__wrap {
-    width: 1000px;
+    width: 1100px;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -172,6 +169,10 @@ export default {
   &__text-caption {
     font-size: 16px;
     color: $white60;
+  }
+
+  &__text {
+    margin-bottom: 40px;
   }
 }
 </style>

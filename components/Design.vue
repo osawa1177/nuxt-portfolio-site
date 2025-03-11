@@ -111,7 +111,7 @@ export default {
 }
 
 .outer {
-  max-width: 1320px;
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
   min-width: 861px;
@@ -140,20 +140,7 @@ export default {
   width: 80%;
   background-size: contain;
   font-size: 4rem;
-  padding-left: 5rem;
 }
-
-.phone2 {
-  /*background: url("~assets/img/img_8.png") no-repeat;*/
-}
-
-/*.phone3 {*/
-/*  background: url("~assets/img/img_9.png") no-repeat;*/
-/*}*/
-
-/*.phone4 {*/
-/*  background: url("~assets/img/img_10.png") no-repeat;*/
-/*}*/
 
 .text {
   width: 100%;

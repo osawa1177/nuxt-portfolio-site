@@ -15,7 +15,7 @@ export default {
 
 <style lang="scss" scoped>
 .intro {
-  max-width: 1320px;
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -33,9 +33,9 @@ export default {
     font-weight: 600;
     line-height: 1.5;
     text-align: left;
-    margin: 11.25rem auto 8px;
+    margin: 72px auto 8px;
     text-align: center;
-    width: 74%;
+    width: 88%;
 
     @include sp {
       font-size: 1.5rem;

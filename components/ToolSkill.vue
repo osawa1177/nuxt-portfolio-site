@@ -1,6 +1,9 @@
 <template>
   <section class="skills relative wrap" id="tool-skill">
     <div class="title">Tool & Skills</div>
+    <p class="tool-skill__text">
+      プロジェクトの目的に応じたデザインとフロントエンド開発を通じて、クライアントの理想を形にします。<br>魅力的で機能的なプロダクトを提供し、ユーザー体験の向上とビジネスの成長を支えます。
+    </p>
     <div class="wrap mt-6 mb-6 skill-wrap">
       <div class="tool-skill-block d-flex flex-wrap justify-content-between">
         <div class="tool-skill-item">
@@ -330,7 +333,6 @@ export default {
 <style lang="scss" scoped>
 .title {
   font-size: 4rem;
-  margin-left: 5rem;
 }
 
 .tool-skill-block {
@@ -397,8 +399,8 @@ export default {
 }
 
 .skill-wrap {
-  max-width: 1000px;
-  margin: 4rem auto;
+  max-width: 1100px;
+  margin: 40px auto;
 }
 
 .tool-skill-block {
@@ -457,12 +459,16 @@ export default {
   padding-top: 11.25rem;
   height: 100%;
   position: relative;
-  max-width: 1320px;
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
 
   @include sp {
     padding-top: 58px;
   }
+}
+
+.tool-skill__text {
+  margin: 24px 0 0;
 }
 </style>
