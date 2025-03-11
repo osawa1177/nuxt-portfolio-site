@@ -130,27 +130,27 @@ export default {
 
 .projects {
   &__wrap {
-    width: 1100px;
+    width: 1000px;
     margin: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 64px;
   }
 
   &__img {
     width: 250px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   &__link-block {
     display: flex;
     flex-direction: row;
     gap: 24px;
-    width: 500px;
+    width: 470px;
 
     &:hover {
       opacity: 0.8;
