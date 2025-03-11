@@ -50,6 +50,15 @@
         </div>
         <div class="tool-skill-item">
           <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/figma.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-90"></div>
+          </div>
+          <div class="tool-skill-name">Figma</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/javascript.png" />
           </div>
           <div class="chart-block">
@@ -62,7 +71,7 @@
             <img src="~/assets/img/toolskill/jquery.png" />
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-70"></div>
+            <div class="chart-item chart-80"></div>
           </div>
           <div class="tool-skill-name">jqery</div>
         </div>
@@ -71,16 +80,25 @@
             <img src="~/assets/img/toolskill/vue.png" />
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-50"></div>
+            <div class="chart-item chart-70"></div>
           </div>
           <div class="tool-skill-name">Vue.js</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/nuxt.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-70"></div>
+          </div>
+          <div class="tool-skill-name">Nuxt</div>
         </div>
         <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/wordpress.png" />
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-60"></div>
+            <div class="chart-item chart-70"></div>
           </div>
           <div class="tool-skill-name">Wordpress</div>
         </div>
@@ -95,10 +113,19 @@
         </div>
         <div class="tool-skill-item">
           <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/github.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-70"></div>
+          </div>
+          <div class="tool-skill-name">Git Hub</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/bootstrap.png" />
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-80"></div>
+            <div class="chart-item chart-60"></div>
           </div>
           <div class="tool-skill-name">Bootstrap 3 / 4</div>
         </div>
@@ -131,30 +158,129 @@
         </div>
         <div class="tool-skill-item">
           <div class="tool-skill-img">
-            <img src="~/assets/img/toolskill/googleanalytics.png" />
+            <img src="~/assets/img/toolskill/googlecloud.png" />
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-70"></div>
+            <div class="chart-item chart-50"></div>
           </div>
-          <div class="tool-skill-name">Googleanalytics</div>
+          <div class="tool-skill-name">Google Cloud</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/firebase.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-50"></div>
+          </div>
+          <div class="tool-skill-name">Firebase</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/cursor.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-60"></div>
+          </div>
+          <div class="tool-skill-name">Cursor</div>
         </div>
         <div class="tool-skill-item">
           <div class="tool-skill-img">
             <img src="~/assets/img/toolskill/seo.png" />
           </div>
           <div class="chart-block">
-            <div class="chart-item chart-70"></div>
+            <div class="chart-item chart-50"></div>
           </div>
           <div class="tool-skill-name">SEO</div>
         </div>
         <div class="tool-skill-item">
           <div class="tool-skill-img">
-            <img src="~/assets/img/toolskill/design.png" />
+            <img src="~/assets/img/toolskill/npm.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-50"></div>
+          </div>
+          <div class="tool-skill-name">npm</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/yarn.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-50"></div>
+          </div>
+          <div class="tool-skill-name">yarn</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/docker.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-40"></div>
+          </div>
+          <div class="tool-skill-name">Docker</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/slack.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-70"></div>
+          </div>
+          <div class="tool-skill-name">Slack</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/visualdesigner.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-70"></div>
+          </div>
+          <div class="tool-skill-name">Visual Designer</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/uidesigner.png" />
           </div>
           <div class="chart-block">
             <div class="chart-item chart-80"></div>
           </div>
-          <div class="tool-skill-name">UI/UXデザイン</div>
+          <div class="tool-skill-name">UI Designer</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/uiengineer.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-80"></div>
+          </div>
+          <div class="tool-skill-name">UI Engineer</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/interactiondesigner.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-60"></div>
+          </div>
+          <div class="tool-skill-name">Interaction Designer</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/uxdesigner.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-60"></div>
+          </div>
+          <div class="tool-skill-name">UX Designer</div>
+        </div>
+        <div class="tool-skill-item">
+          <div class="tool-skill-img">
+            <img src="~/assets/img/toolskill/designsystem.png" />
+          </div>
+          <div class="chart-block">
+            <div class="chart-item chart-80"></div>
+          </div>
+          <div class="tool-skill-name">Design System</div>
         </div>
         <div class="tool-skill-item">
           <div class="tool-skill-img">
@@ -271,7 +397,7 @@ export default {
 }
 
 .skill-wrap {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 4rem auto;
 }
 
@@ -323,7 +449,7 @@ export default {
 
 .tool-skill-name {
   line-height: 1.4;
-  font-size: 0.95em;
+  font-size: 16px;
   margin-top: 0.5rem;
 }
 
