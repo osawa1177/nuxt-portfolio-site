@@ -130,7 +130,7 @@
 
 .header-menu {
   list-style-type: none;
-  font-size: 1rem;
+  font-size: 16px;
   display: flex;
   flex-direction: row;
   align-items: center;
