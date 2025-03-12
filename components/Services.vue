@@ -1,7 +1,7 @@
 <template>
   <div class="intro">
     <h2 class="intro__title">
-      Webサイトの設計、構築、運用、保守を行っています。企画・アイデアから実装まで、サイトやアプリのサービス全体を通してデザイン、開発をしています
+      Webサイトの設計、構築、運用、保守を行っています。企画・アイデアから実装まで、<br>サイトやアプリのサービス全体を通してデザイン、開発をしています
     </h2>
     <h3 class="intro__text">Design / Engineer</h3>
   </div>
@@ -29,13 +29,13 @@ export default {
   }
 
   &__title {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 500;
     line-height: 1.5;
     text-align: left;
     margin: 72px auto 8px;
     text-align: center;
-    width: 88%;
+    width: 100%;
 
     @include sp {
       font-size: 1.5rem;

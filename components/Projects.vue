@@ -128,6 +128,7 @@ export default {
   &__title {
     font-size: 4rem;
     margin-bottom: 32px;
+    font-weight: 500;
 
     @include sp {
       font-size: 3rem;
@@ -142,8 +143,8 @@ export default {
     display: flex;
     gap: 40px;
     margin-bottom: 56px;
-    max-height: 297px;
-    height: 297px;
+    height: auto;
+    min-height: 297px;
 
     &--money {
       background: #1E4762;
@@ -163,7 +164,7 @@ export default {
   }
 
   &__text-block {
-    padding: 24px 0 0 24px;
+    padding: 24px 0 24px 24px;
     flex-basis: 50%;
     margin: 0;
     display: flex;

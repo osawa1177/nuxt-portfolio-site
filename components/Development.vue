@@ -129,12 +129,12 @@ export default {
 }
 
 .phone3 {
-  /*background: url("~assets/img/macbookpro2.png") no-repeat;*/
   margin: 10rem auto;
   height: 80%;
   width: 80%;
   background-size: contain;
   font-size: 4rem;
+  font-weight: 500;
 
   @include sp {
     font-size: 3.5rem;
@@ -168,9 +168,10 @@ export default {
 
 .home-service h3 {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   color: $blue400;
   margin: 0 0 16px;
+  height: 56px;
 }
 
 .home-service p {

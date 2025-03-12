@@ -333,6 +333,7 @@ export default {
 <style lang="scss" scoped>
 .title {
   font-size: 4rem;
+  font-weight: 500;
 }
 
 .tool-skill-block {
@@ -453,6 +454,7 @@ export default {
   line-height: 1.4;
   font-size: 16px;
   margin-top: 0.5rem;
+  font-weight: 400;
 }
 
 .skills {
