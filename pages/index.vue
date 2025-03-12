@@ -42,7 +42,7 @@
     <Services />
     <Design />
     <Development />
-    <Projects :projects="projects" />
+    <Projects :projects="projects" :displayCount="4" />
 
     <div class="button__wrap">
       <nuxt-link to="/projects" class="more fadeonscroll mouse-attract button button-undefined active">

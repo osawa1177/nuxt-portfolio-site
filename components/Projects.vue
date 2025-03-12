@@ -42,13 +42,19 @@ export default {
       type: Array,
       required: true,
     },
+    displayCount: {
+      type: Number,
+      default() {
+        return this.projects ? this.projects.length : 0; // デフォルトで全件表示
+      }
+    }
   },
   data() {
     return {
       projects: projectsData, // JSONデータを使用
-      displayCount: 4,
     };
   },
+
   mounted() {
     this.scrollItemC();
   },
