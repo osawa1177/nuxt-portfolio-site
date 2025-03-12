@@ -37,6 +37,12 @@ if (process.client) {
 }
 
 export default {
+  props: {
+    projects: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
       projects: projectsData, // JSONデータを使用

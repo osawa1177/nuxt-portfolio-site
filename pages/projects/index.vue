@@ -5,40 +5,7 @@
       <div class="bgLight__pos bgLight__two"></div>
       <div class="bgLight__pos bgLight__three"></div>
     </div>
-    <div class="projects__container">
-      <div class="projects__title" id="projects">Projects</div>
-      <p class="projects__text">
-        デザイン、フロントエンド、CSS設計、モダンな開発環境を使用してプロジェクトを実装しています。
-      </p>
-      <section>
-        <div class="projects__wrap">
-          <div v-for="(project, index) in projects.slice(0, displayCount)" :key="index" class="projects__block" :class="project.textBlockClass">
-            <div class="projects__text-block">
-              <h3 class="projects__text-title">{{ project.title }}</h3>
-              <p class="projects__tag">{{ project.tag }}</p>
-              <p class="projects__description">{{ project.description }}</p>
-              <nuxt-link :to="`/projects/${project.link}`" class="more fadeonscroll mouse-attract button button-undefined active">
-                <span class="button-inner mouse-target">
-                  <span class="button-fill"></span>
-                  <span class="button-caption">View More</span>
-                </span>
-              </nuxt-link>
-            </div>
-            <figure class="projects__img-block">
-              <img class="projects__img" :src="require(`~/assets/img/projects/${project.imgSrc}`)" :alt="project.title">
-            </figure>
-          </div>
-        </div>
-      </section>
-      <div class="button__wrap">
-        <nuxt-link to="/" class="more fadeonscroll mouse-attract button button-undefined active">
-          <span class="button-inner mouse-target">
-            <span class="button-fill"></span>
-            <span class="button-caption">Back</span>
-          </span>
-        </nuxt-link>
-      </div>
-    </div>
+    <Projects :projects="projects" />
   </main>
 </template>
 

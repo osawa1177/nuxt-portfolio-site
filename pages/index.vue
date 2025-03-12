@@ -42,7 +42,7 @@
     <Services />
     <Design />
     <Development />
-    <Projects />
+    <Projects :projects="projects" />
 
     <div class="button__wrap">
       <nuxt-link to="/projects" class="more fadeonscroll mouse-attract button button-undefined active">
@@ -65,7 +65,19 @@
 
   </div>
 </template>
+<script>
+import projectsData from '~/data/projects.json';
 
+export default {
+  data() {
+    return {
+      projects: projectsData, // JSONデータを使用
+    };
+  },
+
+
+};
+</script>
 
 <style lang="scss" scoped>
 @import '~/assets/scss/foundation/_button.scss';
