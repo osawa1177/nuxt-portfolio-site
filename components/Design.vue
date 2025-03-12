@@ -88,7 +88,7 @@ export default {
 .home-services-details {
   display: flex;
   flex-flow: row wrap;
-  width: 90%;
+  width: 100%;
   justify-content: space-between;
 
   @include sp {
@@ -169,7 +169,6 @@ export default {
   font-weight: 500;
   color: $blue400;
   margin: 0 0 16px;
-  height: 56px;
 }
 
 .home-service p {
