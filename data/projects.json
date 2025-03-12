@@ -1,0 +1,34 @@
+[
+  {
+    "title": "マネーセミナー",
+    "tag": "Mobile and web site",
+    "description": "楽天保険のマネーセミナーは、個人向けに金融知識を提供するオンラインセミナーです。私たちのチームは、直感的なUI/UXデザインとCMS開発により、スムーズな情報取得と申し込みができるプラットフォームを構築しました。レスポンシブデザイン、運営管理システムを開発し、参加者データの管理を効率化しました。",
+    "imgSrc": "money-seminar.png",
+    "textBlockClass": "projects__block--money",
+    "link": "rakuten-money-seminar"
+  },
+  {
+    "title": "火災保険一括見積もり",
+    "tag": "Mobile and web site",
+    "description": "火災保険一括見積もりサービスは、複数の保険会社のプランを一度の入力で比較できる便利なWebサイトです。物件情報や希望条件を入力するだけで、最適な火災保険の見積もりを取得でき、補償内容や保険料を簡単に比較できます。",
+    "imgSrc": "fire-estimate.png",
+    "textBlockClass": "projects__block--fire",
+    "link": "rakuten-fire-insurance"
+  },
+  {
+    "title": "Live Masq",
+    "tag": "iOS application",
+    "description": "LiveMasq は、画像をアップロードするだけで自動でモザイク処理を行うiOSアプリです。プライバシー保護を重視し、AIによる高精度な顔認識技術を活用して、個人情報が含まれる部分に自動でモザイクを適用します。直感的なUI/ UXデザインにより、シンプルな操作で誰でも簡単に使用可能。さらに、適用範囲のカスタマイズや異なるモザイクスタイルの選択も可能で、用途に応じた柔軟な対応ができます。",
+    "imgSrc": "livemasq-app.png",
+    "textBlockClass": "projects__block--live",
+    "link": "live-masq"
+  },
+  {
+    "title": "Auto Pixelation",
+    "tag": "Desk Top web application",
+    "description": "Auto Pixelation は、デスクトップ向けのWebアプリで、動画と対象の人物の画像をアップロードするだけで、自動でモザイク処理を行うツールです。AIによる高精度な顔認識技術を活用し、指定した人物のみにモザイクを適用。プライバシー保護や映像編集の効率化に貢献します。",
+    "imgSrc": "autopixelation-app.png",
+    "textBlockClass": "projects__block--auto",
+    "link": "auto-pixelation"
+  }
+]

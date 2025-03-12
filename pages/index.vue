@@ -66,6 +66,7 @@
   </div>
 </template>
 
+
 <style lang="scss" scoped>
 @import '~/assets/scss/foundation/_button.scss';
 
