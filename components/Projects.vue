@@ -102,7 +102,7 @@ export default {
     gap: 40px;
     margin-bottom: 56px;
     height: auto;
-    min-height: 297px;
+    min-height: 300px;
     border-radius: 3px;
 
     &--money {
