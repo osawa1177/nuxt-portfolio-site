@@ -6,7 +6,7 @@
     </p>
     <section>
       <div class="projects__wrap">
-        <div v-for="(project, index) in projects.slice(0, displayCount)" :key="index" class="projects__block" :class="project.textBlockClass">
+        <div v-for="(project, index) in projects.slice(0, displayCount)" :key="index" class="projects__block fade-down" :class="project.textBlockClass">
           <div class="projects__text-block">
             <h3 class="projects__text-title">{{ project.title }}</h3>
             <p class="projects__tag">{{ project.tag }}</p>
@@ -60,8 +60,8 @@ export default {
         scrollTrigger: {
           trigger: ".fade-down",
           scrub: true,
-          start: "top 80%",
-          end: "bottom 40%",
+          start: "top 100%",
+          end: "bottom 10%",
         },
         scale: 2,
         y: -10,
