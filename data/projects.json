@@ -30,5 +30,22 @@
     "imgSrc": "autopixelation-app.png",
     "textBlockClass": "projects__block--auto",
     "link": "auto-pixelation"
+  },
+    {
+    "title": "Video Chat",
+    "tag": "Desk Top web application",
+    "description": "Video Chat は、ビデオチャット中の人物の表情をリアルタイムで解析し、感情をグラフ化する革新的なビデオチャットアプリです。AIによる表情認識技術を活用し、喜び・悲しみ・驚き・怒りなどの感情を可視化。オンラインコミュニケーションの質を向上させます。",
+    "imgSrc": "videochat.png",
+    "textBlockClass": "projects__block--video",
+    "link": "videochat"
+  },
+    {
+    "title": "CAREER FLIGHT",
+    "tag": "Mobile and web site",
+    "description": "CAREER FLIGHT は、求職者が自分に合った仕事を見つけられる求人検索サイトであり、特にプロボノ活動に注目した独自の仕組みを提供しています。",
+    "imgSrc": "careerflight.png",
+    "textBlockClass": "projects__block--flight",
+    "link": "career-flight"
   }
+
 ]

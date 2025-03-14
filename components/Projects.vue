@@ -49,11 +49,7 @@ export default {
       }
     }
   },
-  data() {
-    return {
-      projects: projectsData, // JSONデータを使用
-    };
-  },
+
 
   mounted() {
     this.scrollItemC();
@@ -132,6 +128,15 @@ export default {
     &--auto {
       background: #656584
     }
+
+    &--flight {
+      background: #155170
+    }
+
+    &--video {
+      background: #38413F
+    }
+
   }
 
   &__text-block {
