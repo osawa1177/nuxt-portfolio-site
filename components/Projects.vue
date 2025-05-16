@@ -6,15 +6,17 @@
     </p>
     <section>
       <div class="projects__wrap">
-        <div v-for="(project, index) in projects.slice(0, displayCount)" :key="index" class="projects__block fade-down" :class="project.textBlockClass">
+        <div v-for="(project, index) in projects.slice(0, displayCount)" :key="index" class="projects__block fade-down"
+          :class="project.textBlockClass">
           <div class="projects__text-block">
             <h3 class="projects__text-title">{{ project.title }}</h3>
             <p class="projects__tag">{{ project.tag }}</p>
             <p class="projects__description">{{ project.description }}</p>
-            <nuxt-link :to="`/projects/${project.link}`" class="more fadeonscroll mouse-attract button button-undefined active">
+            <nuxt-link :to="`/projects/${project.link}`"
+              class="more fadeonscroll mouse-attract button button-undefined active">
               <span class="button-inner mouse-target">
                 <span class="button-fill"></span>
-                <span class="button-caption">View More</span>
+                <span class="button-caption">View</span>
               </span>
             </nuxt-link>
           </div>
@@ -56,6 +58,7 @@ export default {
   },
   methods: {
     scrollItemC() {
+      if (window.innerWidth <= 768) return;
       gsap.from(".fade-down", {
         scrollTrigger: {
           trigger: ".fade-down",
@@ -89,6 +92,11 @@ export default {
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
+
+    @include sp {
+      margin-top: 6rem;
+      padding: 24px 24px 0;
+    }
   }
 
   &__title {
@@ -112,6 +120,12 @@ export default {
     height: auto;
     min-height: 300px;
     border-radius: 3px;
+
+    @include sp {
+      flex-direction: column-reverse;
+      gap: 0;
+      margin-bottom: 24px;
+    }
 
     &--money {
       background: #1E4762;
@@ -146,6 +160,10 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @include sp {
+      padding: 16px;
+    }
   }
 
   &__text-title {
@@ -169,6 +187,11 @@ export default {
     flex-basis: 50%;
     margin: 0;
     overflow: hidden;
+
+    @include sp {
+      flex-basis: auto;
+      height: 200px;
+    }
   }
 
   &__img {

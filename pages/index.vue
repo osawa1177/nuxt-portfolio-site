@@ -261,6 +261,10 @@ h1 {
 
 .content__hero {
   overflow: hidden;
+
+  @include sp {
+    overflow: visible;
+  }
 }
 
 .subtitle {

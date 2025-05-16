@@ -402,6 +402,10 @@ export default {
 .skill-wrap {
   max-width: 1100px;
   margin: 40px auto;
+
+  @include sp {
+    margin: 24px auto;
+  }
 }
 
 .tool-skill-block {
@@ -418,6 +422,8 @@ export default {
     width: 21.5%;
     order: 1;
   }
+
+  @include sp {}
 }
 
 .tool-skill-item {
@@ -433,6 +439,10 @@ export default {
   text-decoration: none;
   transition: 0.2s;
   color: $white;
+
+  @include sp {
+    width: 47%
+  }
 
   &:hover {
     box-shadow: 0 10px 15px -5px $black12;
@@ -466,7 +476,7 @@ export default {
   width: 100%;
 
   @include sp {
-    padding-top: 58px;
+    padding: 80px 24px 0;
   }
 }
 

@@ -10,26 +10,26 @@
             <div><a href="#tool-skill" class="lined">Tool & Skill</a></div>
           </div>
           <div class="col col-25 col-mobile-50">Email
-            <div><a href="mailto:osawa.tomohisa07@gmail.com" target="_blank" class="lined">osawa.tomohisa07@gmail.com</a>
+            <div><a href="mailto:osawa.tomohisa07@gmail.com" target="_blank"
+                class="lined">osawa.tomohisa07@gmail.com</a>
             </div>
           </div>
           <div class="col col-25 col-mobile-50">Location
             <div class="lined">東京都</div>
-            </div>
           </div>
         </div>
       </div>
-      <div class="row row-smallpadding footer-bottom">
-        <div class="footer-copy">© 2021 © Tomohisa Osawa All rights reserved.</div>
-        </div>
+    </div>
+    <div class="row row-smallpadding footer-bottom">
+      <div class="footer-copy">© 2021 © Tomohisa Osawa All rights reserved.</div>
+    </div>
   </footer>
 </template>
 
 
-<style scoped>
-
-
-.section.footer-smaller .container, .section.footer-smaller {
+<style lang="scss" scoped>
+.section.footer-smaller .container,
+.section.footer-smaller {
   min-height: 0
 }
 
@@ -37,6 +37,10 @@
   line-height: normal;
   margin-top: 11.25rem;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+  @include sp {
+    margin: 24px auto;
+  }
 }
 
 .footer .container {
@@ -68,6 +72,10 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+
+  @include sp {
+    padding: 0px 24px 0;
+  }
 }
 
 .footer-contacts strong {
@@ -88,7 +96,7 @@
   font-size: .875rem;
   justify-content: space-between;
   margin-top: 2rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   padding-bottom: 2rem;
   text-align: center;
 }
@@ -96,7 +104,7 @@
 
 .footer-policies a {
   margin-left: 2rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
 
 }
 

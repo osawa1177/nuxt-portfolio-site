@@ -53,6 +53,8 @@ export default {
   },
   methods: {
     scrollItemC() {
+      if (window.innerWidth <= 768) return;
+
       gsap.timeline({
         scrollTrigger: {
           trigger: ".phone3",
@@ -89,7 +91,6 @@ export default {
 
   @include sp {
     flex-direction: column;
-    width: 45%;
   }
 }
 
@@ -117,6 +118,7 @@ export default {
 
   @include sp {
     flex-direction: column;
+    min-width: auto
   }
 }
 
@@ -126,6 +128,12 @@ export default {
   display: flex;
   margin-bottom: 20rem;
   margin-left: -5%;
+
+  @include sp {
+    margin-left: 24px;
+    height: auto;
+    margin-bottom: 0;
+  }
 }
 
 .phone3 {
@@ -139,6 +147,8 @@ export default {
   @include sp {
     font-size: 3.5rem;
     padding: 0 !important;
+    margin: 6rem auto 1rem;
+    width: 100%;
   }
 }
 
@@ -161,8 +171,10 @@ export default {
   margin-bottom: 56px;
 
   @include sp {
-    width: 45%;
-    margin: 0;
+    width: 100%;
+    font-size: 20px;
+    opacity: 1;
+    margin-bottom: 1rem;
   }
 }
 
@@ -171,6 +183,10 @@ export default {
   font-weight: 500;
   color: $blue400;
   margin: 0 0 16px;
+
+  @include sp {
+    margin: 0 0 8px;
+  }
 }
 
 .home-service p {
