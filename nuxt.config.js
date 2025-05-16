@@ -24,17 +24,16 @@ export default {
 
   css: ["@/assets/scss/styles.scss"],
 
-  plugins: [],
-
+  plugins: [
+    '@/plugins/vue-gtag.js'
+  ],
   components: true,
 
   buildModules: [],
 
-  modules: ["@nuxtjs/style-resources", "@nuxtjs/google-analytics"],
-
-  googleAnalytics: {
-    id: "UA-145060590-1",
-  },
+  modules: [
+    "@nuxtjs/style-resources"
+  ],
 
   styleResources: {
     scss: [
