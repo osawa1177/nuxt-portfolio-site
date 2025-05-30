@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="c-page__main-img">
-      <img :src="`/img/${project.main_img}`" alt="Project Image">
+      <img :src="require(`~/assets/img/projects/${project.main_img}`)" alt="Project Image">
     </div>
     <div class="c-container">
       <div class="c-page__block">
@@ -40,7 +40,7 @@
       <p class="c-page__project-text"><span>- プロジェクトの場所:</span><br>{{ project.location }}</p>
     </div>
     <div class="c-page__img">
-      <img :src="`/img/${project.img_01}`" alt="Project Image">
+      <img :src="require(`~/assets/img/projects/${project.img_01}`)" alt="Project Image">
     </div>
 
     <div class="content">
@@ -68,11 +68,10 @@
 </template>
 
 <script>
+import projects from '~/data/projects.json';
+
 export default {
   async asyncData({ params }) {
-    const projects = await fetch('/content/projects.json')
-      .then(res => res.json())
-      .catch(() => []);
     const project = projects.find(proj => proj.slug === params.slug);
     return { project };
   }
