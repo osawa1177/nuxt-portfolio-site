@@ -4,14 +4,13 @@
       <div class="footer-contacts">
         <div class="row row-smallpadding">
           <div class="col col-25 col-mobile-50">Services
-            <div><a href="#design" class="lined">Design</a></div>
-            <div><a href="#development" class="lined">Development</a></div>
-            <div><a href="#projects" class="lined">Projects</a></div>
-            <div><a href="#tool-skill" class="lined">Tool & Skill</a></div>
+            <div><a href="/#design" class="lined">Design</a></div>
+            <div><a href="/#development" class="lined">Development</a></div>
+            <div><a href="/#projects" class="lined">Projects</a></div>
+            <div><a href="/#tool-skill" class="lined">Tool & Skill</a></div>
           </div>
           <div class="col col-25 col-mobile-50">Email
-            <div><a href="mailto:osawa.tomohisa07@gmail.com" target="_blank"
-                class="lined">osawa.tomohisa07@gmail.com</a>
+            <div><a href="mailto:osawa.tomohisa07@gmail.com" target="_blank" class="lined">osawa.tomohisa07@gmail.com</a>
             </div>
           </div>
           <div class="col col-25 col-mobile-50">Location

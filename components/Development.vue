@@ -164,7 +164,7 @@ export default {
 
 .text h1 {
   opacity: 0;
-  width: 90%;
+  width: 100%;
   font-size: 24px;
   line-height: 1.5;
   font-weight: 600;
