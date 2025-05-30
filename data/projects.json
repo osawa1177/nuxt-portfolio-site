@@ -1,4 +1,12 @@
 [
+    {
+    "title": "楽天pay アプリ機能紹介ページ",
+    "tag": "Mobile and web site",
+    "description": "楽天payのサービス紹介ページのUI/UXデザインを担当。情報設計と視認性を重視し、ブランドの信頼感が伝わるデザインを制作しました。",
+    "imgSrc": "pay.png",
+    "textBlockClass": "projects__block--pay",
+    "link": "rakuten-pay"
+  },
   {
     "title": "マネーセミナー",
     "tag": "Mobile and web site",

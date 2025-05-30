@@ -47,9 +47,9 @@
       <span class="c-page__headline">initiative</span>
       <h2 class="c-page__project-title">取り組み</h2>
       <p class="c-page__project-text-list"><span>- 具体的な取り組み:</span></p>
-        <ul class="c-page__project-text-ul">
-          <li v-for="point in project.key_points" :key="point">{{ point }}</li>
-        </ul>
+      <ul class="c-page__project-text-ul">
+        <li v-for="point in project.key_points" :key="point">{{ point }}</li>
+      </ul>
       <p class="c-page__project-text-list"><span>- 成果:</span></p>
       <ul class="c-page__project-text-ul">
         <li v-for="results in project.result" :key="results">{{ results }}</li>
@@ -69,12 +69,12 @@
 
 <script>
 export default {
-  async asyncData({params}) {
+  async asyncData({ params }) {
     const projects = await fetch('/content/projects.json')
       .then(res => res.json())
       .catch(() => []);
     const project = projects.find(proj => proj.slug === params.slug);
-    return {project};
+    return { project };
   }
 }
 </script>
@@ -104,6 +104,10 @@ export default {
   padding: 0 6.5rem;
   box-sizing: border-box;
   width: 100%;
+
+  img {
+    max-width: 1168px;
+  }
 
   @include sp {
     padding: 0 16px;
@@ -166,12 +170,18 @@ export default {
   margin: 40px auto;
   max-width: 810px;
   box-sizing: border-box;
+
+  img {
+    max-width: 810px;
+  }
 }
+
 .c-page__project-text-list {
   font-size: 16px;
   color: #aaa;
   margin-bottom: 0;
 }
+
 .content ul {
   font-size: 16px;
   list-style: disc;

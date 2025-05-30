@@ -6,14 +6,12 @@
     </p>
     <section>
       <div class="projects__wrap">
-        <div v-for="(project, index) in projects.slice(0, displayCount)" :key="index" class="projects__block fade-down"
-          :class="project.textBlockClass">
+        <div v-for="(project, index) in projects.slice(0, displayCount)" :key="index" class="projects__block fade-down" :class="project.textBlockClass">
           <div class="projects__text-block">
             <h3 class="projects__text-title">{{ project.title }}</h3>
             <p class="projects__tag">{{ project.tag }}</p>
             <p class="projects__description">{{ project.description }}</p>
-            <nuxt-link :to="`/projects/${project.link}`"
-              class="more fadeonscroll mouse-attract button button-undefined active">
+            <nuxt-link :to="`/projects/${project.link}`" class="more fadeonscroll mouse-attract button button-undefined active">
               <span class="button-inner mouse-target">
                 <span class="button-fill"></span>
                 <span class="button-caption">View</span>
@@ -125,6 +123,10 @@ export default {
       flex-direction: column-reverse;
       gap: 0;
       margin-bottom: 24px;
+    }
+
+    &--pay {
+      background: #3B5385;
     }
 
     &--money {
