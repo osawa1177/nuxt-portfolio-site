@@ -23,6 +23,14 @@
         </div>
         <div class="slider__btn-right"><img :src="require(`~/assets/img/icon/right-arrow.svg`)" @click="nextSlide"></div>
       </div>
+      <div class="button__wrap button__wrap--slider">
+        <nuxt-link to="/projects" class="more fadeonscroll mouse-attract button button-undefined active">
+          <span class="button-inner mouse-target">
+            <span class="button-fill"></span>
+            <span class="button-caption">Projects一覧を見る</span>
+          </span>
+        </nuxt-link>
+      </div>
     </div>
   </section>
 </template>
@@ -145,5 +153,9 @@ export default {
 .indicators span.active {
   background-color: #26A0F8;
   width: 34px;
+}
+
+.button__wrap--slider {
+  margin: 48px auto;
 }
 </style>
