@@ -60,20 +60,27 @@
       </ul>
     </div>
 
-
+    <OtherProjects :projects="otherProjects" />
   </div>
+
+
   <div v-else>
     <p>プロジェクトが見つかりません。</p>
   </div>
 </template>
 
 <script>
+import OtherProjects from '~/components/Projects/OtherProjects.vue';
 import projects from '~/data/projects.json';
 
 export default {
+  components: {
+    OtherProjects
+  },
   async asyncData({ params }) {
     const project = projects.find(proj => proj.slug === params.slug);
-    return { project };
+    const otherProjects = projects.filter(proj => proj.slug !== params.slug);
+    return { project, otherProjects };
   }
 }
 </script>
@@ -82,7 +89,7 @@ export default {
 @import '~/assets/scss/foundation/_bglight.scss';
 
 .content {
-  max-width: 1020px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 6.5rem;
   box-sizing: border-box;
@@ -97,15 +104,16 @@ export default {
   padding: 20vh 0 3.2rem;
 }
 
+
 .c-page__main-img {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 6.5rem;
+  text-align: center;
   box-sizing: border-box;
   width: 100%;
 
   img {
-    max-width: 1168px;
+    max-width: 1100px;
   }
 
   @include sp {
@@ -118,9 +126,8 @@ export default {
 }
 
 .c-page__container {
-  max-width: 1320px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 6.5rem;
   box-sizing: border-box;
   width: 100%;
 
@@ -130,15 +137,14 @@ export default {
 }
 
 .c-container {
-  max-width: 1138px;
+  max-width: 1100px;
   padding: 0 6.5rem;
   box-sizing: border-box;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 40px auto;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 82px;
+  padding-bottom: 24px;
 }
 
 .c-page__block {
@@ -167,11 +173,11 @@ export default {
 
 .c-page__img {
   margin: 40px auto;
-  max-width: 810px;
+  max-width: 918px;
   box-sizing: border-box;
 
   img {
-    max-width: 810px;
+    max-width: 918px;
   }
 }
 

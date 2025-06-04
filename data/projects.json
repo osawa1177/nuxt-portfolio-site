@@ -33,7 +33,10 @@
     "tag": "Mobile and web site",
     "imgSrc": "pay/pay.png",
     "textBlockClass": "projects__block--pay",
-    "link": "rakuten-pay"
+    "link": "rakuten-pay",
+    "other_project_img": "pay/pay-list.png",
+    "other_project_description": "楽天payのアプリ機能紹介ページのUI/UXデザインを担当。情報設計と視認性を重視し、ブランドの信頼感が伝わるデザインを制作しました。"
+
   },
   {
     "slug": "rakuten-money-seminar",
@@ -70,7 +73,9 @@
     "tag": "Mobile and web site",
     "imgSrc": "moneyseminar/money-seminar.png",
     "textBlockClass": "projects__block--money",
-    "link": "rakuten-money-seminar"
+    "link": "rakuten-money-seminar",
+    "other_project_img": "moneyseminar/money-seminar-list.png",
+    "other_project_description": "楽天保険のマネーセミナーは、個人向けに金融知識を提供するオンラインセミナーです。"
   },
   {
     "slug": "rakuten-fire-insurance",
@@ -106,7 +111,10 @@
     "tag": "Mobile and web site",
     "imgSrc": "fireestimate/fire-estimate.png",
     "textBlockClass": "projects__block--fire",
-    "link": "rakuten-fire-insurance"
+    "link": "rakuten-fire-insurance",
+    "other_project_img": "fireestimate/fire-estimate-list.png",
+    "other_project_description": "楽天インシュアランスプランニングのマネーセミナーは、個人向けに金融知識を提供するオンラインセミナーです。"
+
   },
   {
     "slug": "live-masq",
@@ -144,7 +152,10 @@
     "tag": "iOS application",
     "imgSrc": "livemasq/livemasq-app.png",
     "textBlockClass": "projects__block--live",
-    "link": "live-masq"
+    "link": "live-masq",
+    "other_project_img": "livemasq/livemasq-list.png",
+    "other_project_description": "LiveMasq は、画像をアップロードするだけで自動でモザイク処理を行うiOSアプリです。"
+
   },
   {
     "slug": "auto-pixelation",
@@ -181,7 +192,10 @@
     "tag": "Desk Top web application",
     "imgSrc": "autopixelation/autopixelation-app.png",
     "textBlockClass": "projects__block--auto",
-    "link": "auto-pixelation"
+    "link": "auto-pixelation",
+    "other_project_img": "autopixelation/autopixelation-list.png",
+    "other_project_description": "Auto Pixelationは、デスクトップ向けのアプリで、動画と対象の人物の画像をアップロードするだけで、自動でモザイク処理を行うツールです。"
+
   },
   {
     "slug": "videochat",
@@ -217,7 +231,10 @@
     "tag": "Desk Top web application",
     "imgSrc": "videochat/videochat.png",
     "textBlockClass": "projects__block--video",
-    "link": "videochat"
+    "link": "videochat",
+    "other_project_img": "videochat/videochat-list.png",
+    "other_project_description": "Video Chat は、ビデオチャット中の人物の表情をリアルタイムで解析し、感情をグラフ化する革新的なビデオチャットアプリです"
+
   },
   {
     "slug": "career-flight",
@@ -254,6 +271,9 @@
     "tag": "Mobile and web site",
     "imgSrc": "careerflight/careerflight.png",
     "textBlockClass": "projects__block--flight",
-    "link": "career-flight"
+    "link": "career-flight",
+    "other_project_img": "careerflight/careerflight-list.png",
+    "other_project_description": "Career Flightは、キャリアアップを目指す人々のための求人情報サイトです。"
+
   }
 ]
