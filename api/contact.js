@@ -2,9 +2,16 @@ require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());
+
+app.use(cors({
+  origin: 'https://osawa-portfolio.web.app', // 許可するオリジンを指定
+  methods: ['GET', 'POST'], // 許可するHTTPメソッドを指定
+  credentials: true // クッキーを含める場合はtrueに設定
+}));
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
