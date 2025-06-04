@@ -1,9 +1,11 @@
 <template>
   <div class="projects__container">
-    <div class="projects__title" id="projects">Projects</div>
-    <p class="projects__text">
-      デザイン、フロントエンド、CSS設計、モダンな開発環境を使用してプロジェクトを実装しています。
-    </p>
+    <div class="c-page__contact-title">
+      <span class="c-page__headline">これまでの実績</span>
+      <h2 class="c-page__content">PROJECTS</h2>
+      <p> デザイン、フロントエンド、CSS設計、モダンな開発環境を使用してプロジェクトを実装しています。
+      </p>
+    </div>
     <section>
       <div class="projects__wrap">
         <div v-for="(project, index) in projects.slice(0, displayCount)" :key="index" class="projects__block fade-down" :class="project.textBlockClass">

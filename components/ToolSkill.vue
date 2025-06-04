@@ -1,9 +1,11 @@
 <template>
   <section class="skills relative wrap" id="tool-skill">
-    <div class="title">Tool & Skills</div>
-    <p class="tool-skill__text">
-      プロジェクトの目的に応じたデザインとフロントエンド開発を通じて、クライアントの理想を形にします。<br>魅力的で機能的なプロダクトを提供し、ユーザー体験の向上とビジネスの成長を支えます。
-    </p>
+    <div class="c-page__contact-title">
+      <span class="c-page__headline">使用ツール / スキル</span>
+      <h2 class="c-page__content">TOOL & SKILLS</h2>
+      <p> プロジェクトの目的に応じたデザインとフロントエンド開発を通じて、クライアントの理想を形にします。<br>魅力的で機能的なプロダクトを提供し、ユーザー体験の向上とビジネスの成長を支えます。
+      </p>
+    </div>
     <div class="wrap mt-6 mb-6 skill-wrap">
       <div class="tool-skill-block d-flex flex-wrap justify-content-between">
         <div class="tool-skill-item">

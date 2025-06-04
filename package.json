@@ -15,7 +15,10 @@
     "@nuxtjs/google-gtag": "^1.0.4",
     "@nuxtjs/style-resources": "^1.0.0",
     "core-js": "^3.8.3",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
     "fibers": "^5.0.0",
+    "nodemailer": "^7.0.3",
     "nuxt": "2.15.8",
     "sass": "1.69.5"
   },

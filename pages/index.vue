@@ -54,12 +54,18 @@
     </div>
     <ToolSkill />
 
+    <ContactForm />
+
   </div>
 </template>
 <script>
 import projectsData from '~/data/projects.json';
+import ContactForm from '~/components/ContactForm.vue';
 
 export default {
+  components: {
+    ContactForm
+  },
   data() {
     return {
       projects: projectsData, // JSONデータを使用

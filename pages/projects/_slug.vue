@@ -5,12 +5,13 @@
       <div class="bgLight__pos bgLight__two"></div>
       <div class="bgLight__pos bgLight__three"></div>
     </div>
-    <div class="c-page__container">
-      <div class="c-page__title">
-        <span class="c-page__headline">Latest projects</span>
-        <h1 class="c-page__content">これまでに携わったProjectsで作成したWebサイトやアプリのデザインです。</h1>
-      </div>
+
+    <div class="c-page__contact-title">
+      <span class="c-page__headline">お問い合わせ</span>
+      <h2 class="c-page__content">PREVIOUS PROJECTS</h2>
+      <p>これまでに携わったProjectsで作成したWebサイトやアプリのデザインです。</p>
     </div>
+
     <div class="c-page__main-img">
       <img :src="require(`~/assets/img/projects/${project.main_img}`)" alt="Project Image">
     </div>
@@ -104,7 +105,6 @@ export default {
   padding: 20vh 0 3.2rem;
 }
 
-
 .c-page__main-img {
   max-width: 1320px;
   margin: 0 auto;
@@ -193,5 +193,15 @@ export default {
   padding-left: 16px;
   line-height: 1.85;
   color: #aaa;
+}
+
+.c-page {
+  &__contact-title {
+    padding: 20vh 0 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+  }
 }
 </style>

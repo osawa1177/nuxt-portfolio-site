@@ -25,10 +25,9 @@ export default {
 
   buildModules: [],
 
-  modules: [
-    "@nuxtjs/style-resources",
-    "@nuxtjs/google-gtag",
-  ],
+  serverMiddleware: ["~/api/contact.js"],
+
+  modules: ["@nuxtjs/style-resources", "@nuxtjs/google-gtag", "@nuxtjs/axios"],
 
   "google-gtag": {
     id: "G-2QX64DJL5F",
