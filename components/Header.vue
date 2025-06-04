@@ -1,15 +1,20 @@
 <template>
   <header class="header">
-    <a href="/" class="header-logo">
-      <span class="header-logo-img site-title"><img src="~/assets/img/logo.svg" /></span>
-    </a>
+    <nuxt-link to="/" class="header-logo">
+      <span class="header-logo-img site-title">
+        <img src="~/assets/img/logo.svg" />
+      </span>
+    </nuxt-link>
     <div class="container">
       <ul class="header-menu">
-        <li class="header-item"><a href="/#services" class="header-link">Services</a></li>
-        <li class="header-item"><a href="/#design" class="header-link">Design</a></li>
-        <li class="header-item"><a href="/#development" class="header-link">Development</a></li>
-        <li class="header-item"><nuxt-link to="/projects" class="header-link">Projects</nuxt-link></li>
-        <li class="header-item"><a href="/#tool-skill" class="header-link">Tool & Skill</a></li>
+        <li class="header-item"><nuxt-link to="/#services" class="header-link">SERVICE</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/#design" class="header-link">DESIGN</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/#development" class="header-link">DEVELOPMENT</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/projects" class="header-link">PROJECTS</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/#tool-skill" class="header-link">TOOL & SKILL</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/contact" class="header-btn">
+            <span class="button-caption">相談・お問い合わせ</span>
+          </nuxt-link></li>
       </ul>
     </div>
   </header>
@@ -20,8 +25,7 @@
   transition: width 0.25s ease-in-out 0.05s;
 
   img {
-    width: 100px;
-    height: 70px;
+    width: 63px;
   }
 }
 
@@ -33,6 +37,21 @@
   width: 100vw;
   transition: all .5s;
   z-index: 10
+}
+
+.header-btn {
+  padding: 10px 23px;
+  background-color: #26A0F8;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: .3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .header:before {
@@ -51,7 +70,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 100px;
+  height: 74px;
 
   @include sp {
     flex-direction: column;
@@ -62,9 +81,6 @@
   position: absolute;
   left: 80px;
   top: 13px;
-  width: 40px;
-  height: 40px;
-  z-index: 10;
 
   @include sp {
     left: 8px;
@@ -77,10 +93,6 @@
   top: 0;
   left: 0;
   transition: all .5s
-}
-
-.header-item {
-  margin-left: 3rem
 }
 
 .header-link {
@@ -137,11 +149,16 @@
   transition: all .5s;
   opacity: 1;
   transform: none;
-  margin: 0 80px 0 0;
   position: relative;
+  gap: 32px;
+  margin: 0 32px 0px 0px;
 
   @include sp {
     display: none;
   }
+}
+
+.button-inner {
+  padding: 8px 32px;
 }
 </style>

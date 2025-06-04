@@ -84,13 +84,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .c-page {
-
-  &__contact-wrap {
-    display: flex;
-    flex-direction: column;
-  }
 
   &__container {
     max-width: 1100px;
@@ -206,6 +201,10 @@ export default {
   &__contact-form select:focus {
     border-color: #26A0F8;
     outline: none;
+  }
+
+  &__contact-title p {
+    margin-bottom: 40px;
   }
 }
 
