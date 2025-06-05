@@ -1,0 +1,113 @@
+<template>
+  <article class="article-container" v-if="post">
+    <h1 class="article-title">{{ post.title }}</h1>
+    <p class="article-date">{{ post.date }}</p>
+    <div class="article-body" v-html="post.content" />
+
+    <div class="button__wrap button__wrap--slider">
+      <nuxt-link to="/articles" class="more fadeonscroll mouse-attract button button-undefined active">
+        <span class="button-inner mouse-target">
+          <span class="button-fill"></span>
+          <span class="button-caption">記事一覧へ戻る</span>
+        </span>
+      </nuxt-link>
+    </div>
+  </article>
+
+</template>
+
+<script>
+import { getPostBySlug } from '@/utils/loadMarkdown';
+
+export default {
+  data() {
+    return {
+      post: null
+    };
+  },
+  created() {
+    const slug = this.$route.params.slug;
+    this.post = getPostBySlug(slug);
+  }
+};
+</script>
+
+<style scoped>
+.button__wrap {
+  margin-top: 72px;
+}
+
+.article-container {
+  color: #ededed;
+  max-width: 800px;
+  margin: 10rem auto;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.8;
+}
+
+.article-title {
+  font-size: 32px;
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.article-date {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.article-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.article-body>>>h2 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.article-body>>>h3 {
+  font-size: 18px;
+  margin: 0;
+  padding-left: 8px;
+  font-weight: 600;
+}
+
+.article-body>>>p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.article-body>>>ul,
+.article-body>>>ol {
+  margin: 0;
+  font-size: 1rem;
+  padding-left: 40px;
+}
+
+.article-body>>>li {
+  margin-bottom: 0.5rem;
+}
+
+.article-body>>>img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.article-body>>>blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-left: 4px solid #ccc;
+  color: #555;
+}
+
+.article-body>>>a {
+  color: #0056d2;
+  text-decoration: underline;
+}
+</style>

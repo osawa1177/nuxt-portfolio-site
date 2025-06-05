@@ -1,5 +1,7 @@
 export default {
-  ssr: false,
+  ssr: false, // ← SPAモード
+
+  target: "static",
 
   head: {
     title: "portfolio-site",
@@ -21,11 +23,10 @@ export default {
   css: ["@/assets/scss/styles.scss"],
 
   plugins: [],
+
   components: true,
 
   buildModules: [],
-
-  serverMiddleware: ["~/api/contact.js"],
 
   modules: ["@nuxtjs/style-resources", "@nuxtjs/google-gtag", "@nuxtjs/axios"],
 
@@ -44,6 +45,8 @@ export default {
     ],
   },
 
+  serverMiddleware: ["~/api/contact.js"],
+
   build: {
     transpile: ["gsap"],
     extend(config, { isDev, isClient }) {
@@ -52,6 +55,12 @@ export default {
           fs: "empty",
         };
       }
+
+      // Markdown を raw-loader で読み込む設定を追加
+      config.module.rules.push({
+        test: /\.md$/,
+        use: "raw-loader",
+      });
     },
   },
 };

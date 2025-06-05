@@ -43,8 +43,7 @@
     <Design />
     <Development />
     <Projects :projects="projects" :displayCount="4" />
-
-    <div class="button__wrap">
+    <div class="text-center">
       <nuxt-link to="/projects" class="more fadeonscroll mouse-attract button button-undefined active">
         <span class="button-inner mouse-target">
           <span class="button-fill"></span>
@@ -52,32 +51,50 @@
         </span>
       </nuxt-link>
     </div>
+    <ArticleList :posts="posts" />
+    <div class="text-center">
+      <nuxt-link to="/articles" class="more fadeonscroll mouse-attract button button-undefined active">
+        <span class="button-inner mouse-target">
+          <span class="button-fill"></span>
+          <span class="button-caption">View More</span>
+        </span>
+      </nuxt-link>
+    </div>
     <ToolSkill />
-
     <ContactForm />
 
   </div>
 </template>
 <script>
+import { getAllPosts } from '@/utils/loadMarkdown';
 import projectsData from '~/data/projects.json';
 import ContactForm from '~/components/ContactForm.vue';
+import ArticleList from '~/components/Article/ArticleList.vue';
 
 export default {
   components: {
-    ContactForm
+    ContactForm,
+    ArticleList
   },
   data() {
     return {
-      projects: projectsData, // JSONデータを使用
+      posts: [],
+      projects: projectsData,
     };
   },
-
+  created() {
+    this.posts = getAllPosts();
+  },
 
 };
 </script>
 
 <style lang="scss" scoped>
 @import '~/assets/scss/foundation/_button.scss';
+
+.text-center {
+  text-align: center;
+}
 
 .menu-toggle {
   width: 40px;
