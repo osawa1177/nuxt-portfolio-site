@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .breadcrumb {
   max-width: 1100px;
   margin: 82px auto 0;
@@ -39,6 +39,11 @@ export default {
   gap: 0.5em;
   list-style: none;
   font-size: 0.9em;
+
+  @include sp {
+    padding: 0 16px;
+    font-size: 10px;
+  }
 }
 
 .breadcrumb li::after {

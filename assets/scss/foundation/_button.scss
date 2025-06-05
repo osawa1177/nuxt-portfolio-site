@@ -38,6 +38,11 @@
   overflow: hidden;
   border-radius: 55px;
   vertical-align: top;
+
+    @include sp {
+  padding: 20px 40px;
+
+  }
 }
 
 .button-inner:before {

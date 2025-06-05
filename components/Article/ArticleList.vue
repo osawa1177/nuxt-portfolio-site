@@ -50,6 +50,10 @@ export default {
     gap: 24px;
     flex-flow: wrap;
   }
+
+  @include sp {
+    padding: 40px 16px 0;
+  }
 }
 
 .article-item {
@@ -63,6 +67,10 @@ export default {
   transition: transform 0.3s;
   width: calc(34% - 24px);
   height: auto;
+
+  @include sp {
+    width: 100%;
+  }
 }
 
 .article-item:hover {

@@ -478,7 +478,7 @@ export default {
   width: 100%;
 
   @include sp {
-    padding: 80px 24px 0;
+    padding: 80px 16px 0;
   }
 }
 

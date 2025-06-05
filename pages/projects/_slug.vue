@@ -104,7 +104,9 @@ export default {
   width: 100%;
 
   @include sp {
-    font-size: 20px;
+    flex-direction: column;
+    padding: 0 16px;
+    font-size: 16px;
   }
 }
 
@@ -117,6 +119,7 @@ export default {
 
   img {
     max-width: 1100px;
+    width: 100%;
   }
 
   @include sp {
@@ -148,16 +151,37 @@ export default {
   justify-content: space-between;
   margin: 40px auto;
   padding-bottom: 24px;
+
+  @include sp {
+    flex-direction: column;
+    padding: 0 16px;
+    gap: 8px;
+    margin: 16px auto;
+  }
+}
+
+.c-page__content {
+  @include sp {
+    font-size: 24px;
+  }
 }
 
 .c-page__block {
   display: flex;
   flex-direction: column;
   font-size: 24px;
+
+  @include sp {
+    font-size: 16px;
+  }
 }
 
 .c-page__data {
   font-size: 24px;
+
+  @include sp {
+    font-size: 20px;
+  }
 }
 
 .c-page__title {
@@ -167,6 +191,11 @@ export default {
 .c-page__project-title {
   font-size: 28px;
   margin-top: 8px;
+
+  @include sp {
+    font-size: 20px;
+    margin: 8px 0;
+  }
 }
 
 .c-page__project-text {
@@ -181,6 +210,8 @@ export default {
 
   img {
     max-width: 918px;
+    width: 100%;
+    padding: 0 16px;
   }
 }
 
@@ -205,6 +236,18 @@ export default {
     margin: 0 auto;
     box-sizing: border-box;
     width: 100%;
+
+    @include sp {
+      padding: 0 16px;
+    }
+  }
+
+  &__headline {
+    @include sp {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1;
+    }
   }
 }
 </style>

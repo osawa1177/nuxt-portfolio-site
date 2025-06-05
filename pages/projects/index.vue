@@ -49,6 +49,11 @@ export default {
     margin: 0 auto;
     width: 100%;
     margin-top: 56px;
+
+    @include sp {
+      margin-top: 48px;
+      padding: 0 16px;
+    }
   }
 
   &__title {

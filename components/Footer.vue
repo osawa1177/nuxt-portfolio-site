@@ -196,6 +196,11 @@
   z-index: 2;
   background: #121212;
 
+  @include sp {
+    margin-top: 32px;
+    padding-top: 32px;
+  }
+
   &.lp {
     margin: 0;
     padding: 64px 0 40px 0;
@@ -211,12 +216,21 @@
       display: flex;
       justify-content: space-between;
 
+      @include sp {
+        flex-direction: column;
+        margin: 0 16px;
+      }
 
       >.logo {
         width: 50%;
 
         img {
           width: 93px;
+
+          @include sp {
+            width: 62px;
+            padding-bottom: 16px;
+          }
         }
 
         &.lp {
@@ -238,6 +252,10 @@
         width: 43%;
         display: flex;
         justify-content: space-between;
+
+        @include sp {
+          flex-direction: column;
+        }
 
         >.list {
           width: auto;
@@ -318,6 +336,10 @@
       text-align: left;
       border-top: 1px solid #666666;
       padding-bottom: 40px;
+
+      @include sp {
+        margin: 0 16px;
+      }
 
       &.lp {
         margin-top: 64px;

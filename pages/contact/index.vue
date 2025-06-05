@@ -17,6 +17,10 @@ export default {
   display: flex;
   flex-direction: row;
   padding: 20vh 0 3.2rem;
+
+  @include sp {
+    flex-direction: column;
+  }
 }
 
 ::v-deep .c-page__contact-form {

@@ -95,7 +95,7 @@ export default {
 
     @include sp {
       margin-top: 6rem;
-      padding: 24px 24px 0;
+      padding: 72px 16px 0;
     }
   }
 

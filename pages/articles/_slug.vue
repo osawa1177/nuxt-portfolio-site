@@ -41,7 +41,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .button__wrap {
   margin-top: 72px;
 }
@@ -52,6 +52,11 @@ export default {
   margin: 10rem auto;
   font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.8;
+
+  @include sp {
+    margin: 40px 0;
+    padding: 0 16px;
+  }
 }
 
 .article-title {
@@ -59,6 +64,10 @@ export default {
   margin: 0;
   line-height: 1.2;
   font-weight: 600;
+
+  @include sp {
+    font-size: 24px;
+  }
 }
 
 .article-date {
@@ -72,17 +81,25 @@ export default {
   gap: 16px;
 }
 
-.article-body>>>h2 {
+::v-deep(.article-body h2) {
   font-size: 24px;
   margin: 0;
   font-weight: 600;
+
+  @include sp {
+    font-size: 20px;
+  }
 }
 
-.article-body>>>h3 {
+::v-deep(.article-body h3) {
   font-size: 18px;
   margin: 0;
   padding-left: 8px;
   font-weight: 600;
+
+  @include sp {
+    font-size: 16px;
+  }
 }
 
 .article-body>>>p {
@@ -91,20 +108,37 @@ export default {
   font-weight: 300;
 }
 
-.article-body>>>ul,
-.article-body>>>ol {
+::v-deep(.article-body ul) {
   margin: 0;
   font-size: 1rem;
   padding-left: 40px;
+
+  @include sp {
+    padding-left: 24px;
+  }
+}
+
+::v-deep(.article-body ol) {
+  margin: 0;
+  font-size: 1rem;
+  padding-left: 40px;
+
+  @include sp {
+    padding-left: 24px;
+  }
 }
 
 .article-body>>>li {
   margin-bottom: 0.5rem;
 }
 
-.article-body>>>img {
+::v-deep(.article-body img) {
   max-width: 100%;
   border-radius: 8px;
+
+  @include sp {
+    width: 100%;
+  }
 }
 
 .article-body>>>blockquote {
