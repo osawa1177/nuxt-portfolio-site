@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { getAllPosts } from '@/utils/loadMarkdown';
+import { getAllPosts } from '@/utils/loadMarkdown.client';
 import ArticleList from '~/components/Article/ArticleList.vue';
 
 export default {

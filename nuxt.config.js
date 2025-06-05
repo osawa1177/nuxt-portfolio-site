@@ -1,6 +1,17 @@
-export default {
-  ssr: false, // ← SPAモード
+import fs from "fs";
+import path from "path";
 
+const contentDir = path.resolve(__dirname, "content");
+
+const getArticleRoutes = () => {
+  const files = fs.readdirSync(contentDir);
+  return files
+    .filter((file) => file.endsWith(".md"))
+    .map((file) => `/articles/${file.replace(".md", "")}`);
+};
+
+export default {
+  ssr: false,
   target: "static",
 
   head: {
@@ -23,7 +34,6 @@ export default {
   css: ["@/assets/scss/styles.scss"],
 
   plugins: [],
-
   components: true,
 
   buildModules: [],
@@ -56,11 +66,15 @@ export default {
         };
       }
 
-      // Markdown を raw-loader で読み込む設定を追加
       config.module.rules.push({
         test: /\.md$/,
         use: "raw-loader",
       });
     },
+  },
+
+  generate: {
+    fallback: true,
+    routes: getArticleRoutes(),
   },
 };

@@ -66,7 +66,7 @@
   </div>
 </template>
 <script>
-import { getAllPosts } from '@/utils/loadMarkdown';
+import { getAllPosts } from '@/utils/loadMarkdown.client';
 import projectsData from '~/data/projects.json';
 import ContactForm from '~/components/ContactForm.vue';
 import ArticleList from '~/components/Article/ArticleList.vue';

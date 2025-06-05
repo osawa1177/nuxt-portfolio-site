@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "yarn build && firebase deploy --only hosting --project=osawa-portfolio"
+    "deploy": "yarn generate && firebase deploy --only hosting --project=osawa-portfolio"
   },
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.16.4",

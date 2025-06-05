@@ -1,9 +1,10 @@
+// utils/loadMarkdown.client.js
 import matter from "gray-matter";
 import MarkdownIt from "markdown-it";
 
 const md = new MarkdownIt();
 
-// .mdファイルを読み込み（Webpack限定）
+// Webpack環境でのみ動作（クライアントサイド用）
 const files = require.context("../content", false, /\.md$/);
 
 const posts = files.keys().map((key) => {
