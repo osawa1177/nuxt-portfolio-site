@@ -5,6 +5,7 @@
       <div class="bgLight__pos bgLight__two"></div>
       <div class="bgLight__pos bgLight__three"></div>
     </div>
+    <Breadcrumb :custom="breadcrumbs" />
     <Projects :projects="projects" />
   </main>
 </template>
@@ -12,16 +13,21 @@
 <script>
 
 import projectsData from '~/data/projects.json';
-
+import Breadcrumb from '~/components/Breadcrumb.vue';
 
 export default {
+  components: {
+    Breadcrumb
+  },
   data() {
     return {
-      projects: projectsData, // JSONデータを使用
+      projects: projectsData,
+      breadcrumbs: [
+        { text: 'TOP', path: '/' },
+        { text: 'プロジェクト一覧', path: '/projects' }
+      ]
     };
-  },
-
-
+  }
 };
 </script>
 
@@ -42,7 +48,7 @@ export default {
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
-    margin-top: 13rem;
+    margin-top: 56px;
   }
 
   &__title {

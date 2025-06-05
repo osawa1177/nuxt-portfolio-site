@@ -5,7 +5,7 @@
       <div class="bgLight__pos bgLight__two"></div>
       <div class="bgLight__pos bgLight__three"></div>
     </div>
-
+    <Breadcrumb :custom="breadcrumbs" />
     <div class="c-page__contact-title">
       <span class="c-page__headline">お問い合わせ</span>
       <h2 class="c-page__content">PREVIOUS PROJECTS</h2>
@@ -73,15 +73,22 @@
 <script>
 import OtherProjects from '~/components/Projects/OtherProjects.vue';
 import projects from '~/data/projects.json';
+import Breadcrumb from '~/components/Breadcrumb.vue';
 
 export default {
   components: {
-    OtherProjects
+    OtherProjects,
+    Breadcrumb
   },
   async asyncData({ params }) {
     const project = projects.find(proj => proj.slug === params.slug);
     const otherProjects = projects.filter(proj => proj.slug !== params.slug);
-    return { project, otherProjects };
+    const breadcrumbs = [
+      { text: 'TOP', path: '/' },
+      { text: 'プロジェクト一覧', path: '/projects' },
+      { text: project?.title || '', path: `/projects/${params.slug}` }
+    ];
+    return { project, otherProjects, breadcrumbs };
   }
 }
 </script>
@@ -99,10 +106,6 @@ export default {
   @include sp {
     font-size: 20px;
   }
-}
-
-.c-page__title {
-  padding: 20vh 0 3.2rem;
 }
 
 .c-page__main-img {
@@ -197,7 +200,7 @@ export default {
 
 .c-page {
   &__contact-title {
-    padding: 20vh 0 24px;
+    padding: 40px 0 24px;
     max-width: 1100px;
     margin: 0 auto;
     box-sizing: border-box;

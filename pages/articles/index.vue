@@ -1,5 +1,6 @@
 <template>
   <main>
+    <Breadcrumb :custom="breadcrumbs" />
     <div class="bgLight">
       <div class="bgLight__pos bgLight__one"></div>
       <div class="bgLight__pos bgLight__two"></div>
@@ -12,14 +13,20 @@
 <script>
 import { getAllPosts } from '@/utils/loadMarkdown.client';
 import ArticleList from '~/components/Article/ArticleList.vue';
+import Breadcrumb from '~/components/Breadcrumb.vue'
 
 export default {
   components: {
-    ArticleList
+    ArticleList,
+    Breadcrumb
   },
   data() {
     return {
       articles: getAllPosts(), // Markdownデータを使用
+      breadcrumbs: [
+        { text: 'TOP', path: '/' },
+        { text: '記事一覧', path: '/articles' }
+      ]
     };
   }
 };
@@ -28,8 +35,4 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/scss/foundation/_bglight.scss';
 @import '~/assets/scss/foundation/_button.scss';
-
-.article-list {
-  padding: 20vh 0 3.2rem;
-}
 </style>

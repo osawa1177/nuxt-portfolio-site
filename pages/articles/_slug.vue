@@ -1,30 +1,39 @@
 <template>
-  <article class="article-container" v-if="post">
-    <h1 class="article-title">{{ post.title }}</h1>
-    <p class="article-date">{{ post.date }}</p>
-    <div class="article-body" v-html="post.content" />
+  <div>
+    <Breadcrumb :custom="breadcrumbs" />
+    <article class="article-container" v-if="post">
+      <h1 class="article-title">{{ post.title }}</h1>
+      <p class="article-date">{{ post.date }}</p>
+      <div class="article-body" v-html="post.content" />
 
-    <div class="button__wrap button__wrap--slider">
-      <nuxt-link to="/articles" class="more fadeonscroll mouse-attract button button-undefined active">
-        <span class="button-inner mouse-target">
-          <span class="button-fill"></span>
-          <span class="button-caption">記事一覧へ戻る</span>
-        </span>
-      </nuxt-link>
-    </div>
-  </article>
-
+      <div class="button__wrap button__wrap--slider">
+        <nuxt-link to="/articles" class="more fadeonscroll mouse-attract button button-undefined active">
+          <span class="button-inner mouse-target">
+            <span class="button-fill"></span>
+            <span class="button-caption">記事一覧へ戻る</span>
+          </span>
+        </nuxt-link>
+      </div>
+    </article>
+  </div>
 </template>
 
 <script>
 import { getPostBySlug } from '@/utils/loadMarkdown';
+import Breadcrumb from '~/components/Breadcrumb.vue'
 
 export default {
-  data() {
-    return {
-      post: null
-    };
+  components: { Breadcrumb },
+  async asyncData({ params }) {
+    const post = getPostBySlug(params.slug)
+    const breadcrumbs = [
+      { path: '/', label: 'TOP' },
+      { path: '/articles', label: '記事一覧' },
+      { path: `/articles/${params.slug}`, label: post.title }
+    ]
+    return { post, breadcrumbs }
   },
+
   created() {
     const slug = this.$route.params.slug;
     this.post = getPostBySlug(slug);
