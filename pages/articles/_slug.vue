@@ -102,6 +102,17 @@ export default {
   }
 }
 
+::v-deep(.article-body h4) {
+  font-size: 16px;
+  margin: 0;
+  padding-left: 8px;
+  font-weight: 600;
+
+  @include sp {
+    font-size: 14px;
+  }
+}
+
 .article-body>>>p {
   margin: 0;
   font-size: 16px;

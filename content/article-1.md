@@ -2,10 +2,10 @@
 title: "【初心者向け】伝わるWebデザインの基本原則とは？"
 date: "2025年6月5日"
 tags: ["Webデザイン", "UI/UX", "デザイン原則"]
-thumbnail: "/img/article/design01.png"
+thumbnail: "/img/article/design/design01.png"
 ---
 
-![伝わるWebデザインの基本原則とは？](/img/article/design01.png)
+![伝わるWebデザインの基本原則とは？](/img/article/≈/design01.png)
 
 ## はじめに
 
@@ -39,7 +39,7 @@ Webデザインにおいて「おしゃれ」よりも大切なのは、「伝�
 - ブロックのまとまりを作る
 - 要素の関係性を伝える
 
-![グリッドレイアウト図](/img/article/design-grid.jpg)
+![グリッドレイアウト図](/img/article/design/design-grid.jpg)
 
 ## 3. タイポグラフィとカラー設計
 
@@ -69,7 +69,7 @@ Webデザインにおいて「おしゃれ」よりも大切なのは、「伝�
 - 入力ミスに対して即座にエラーを表示する
 - ローディング中も安心できるインジケーターを表示
 
-![ui/ux例](/img/article/design-uiux.jpg)
+![ui/ux例](/img/article/design/design-uiux.jpg)
 
 ## まとめ
 

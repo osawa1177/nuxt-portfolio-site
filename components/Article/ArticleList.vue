@@ -101,6 +101,11 @@ export default {
     font-size: 16px;
     color: #333;
     margin: 0;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 70px;
   }
 }
 
