@@ -5,7 +5,7 @@ tags: ["Webデザイン", "UI/UX", "デザイン原則"]
 thumbnail: "/img/article/design/design01.png"
 ---
 
-![伝わるWebデザインの基本原則とは？](/img/article/≈/design01.png)
+![伝わるWebデザインの基本原則とは？](/img/article/design/design01.png)
 
 ## はじめに
 
