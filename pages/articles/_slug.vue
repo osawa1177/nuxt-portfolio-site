@@ -49,7 +49,7 @@ export default {
 .article-container {
   color: #ededed;
   max-width: 800px;
-  margin: 10rem auto;
+  margin: 72px auto;
   font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.8;
 

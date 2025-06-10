@@ -1,6 +1,6 @@
 ---
 title: "OOUIとは？アプリを直感的にする設計法"
-date: "2025年6月6日"
+date: "2025/6/6"
 tags: ["UI設計", "UX", "OOUI", "業務改善"]
 thumbnail: "/img/article/ooui/ooui-thumb.png"
 ---

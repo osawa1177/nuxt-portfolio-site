@@ -1,6 +1,6 @@
 ---
 title: "UXの5段階モデルとは？ユーザー体験設計の基本を解説"
-date: "2025-06-09"
+date: "2025/6/9"
 tags: ["UX", "UI/UX設計", "UXデザイン", "ユーザー体験"]
 thumbnail: "/img/article/ux5model/ux-main.png"
 ---

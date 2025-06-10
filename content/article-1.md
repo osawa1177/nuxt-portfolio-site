@@ -1,6 +1,6 @@
 ---
 title: "【初心者向け】伝わるWebデザインの基本原則とは？"
-date: "2025年6月5日"
+date: "2025/6/5"
 tags: ["Webデザイン", "UI/UX", "デザイン原則"]
 thumbnail: "/img/article/design/design01.png"
 ---

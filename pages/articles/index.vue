@@ -6,7 +6,9 @@
       <div class="bgLight__pos bgLight__two"></div>
       <div class="bgLight__pos bgLight__three"></div>
     </div>
-    <ArticleList :posts="articles" />
+    <div class="article__wrap">
+      <ArticleList :posts="articles" :isSliderEnabled="false" />
+    </div>
   </main>
 </template>
 
@@ -35,4 +37,15 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/scss/foundation/_bglight.scss';
 @import '~/assets/scss/foundation/_button.scss';
+
+::v-deep(.article-wrap) {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  width: 1100px;
+}
+
+::v-deep(.article-item) {
+  width: 350px;
+}
 </style>

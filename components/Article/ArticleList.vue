@@ -7,18 +7,22 @@
         気になるテーマがあれば、ぜひ記事もあわせてご覧ください。
       </p>
     </div>
-    <ul>
-      <li v-for="post in posts" :key="post.slug" class="article-item">
-        <nuxt-link :to="`/articles/${post.slug}`" class="article-link">
-          <img :src="post.thumbnail" :alt="post.title" class="article-thumb" />
-          <div class="article-info">
-            <h3>{{ post.title }}</h3>
-            <p class="article-date">{{ post.date }}</p>
-            <p class="read-more">記事を読む</p>
-          </div>
-        </nuxt-link>
-      </li>
-    </ul>
+    <div :class="{ 'slider': isSliderEnabled }">
+      <div class="article-wrap" :class="{ 'slider-track': isSliderEnabled }" :style="isSliderEnabled ? { transform: `translateX(-${currentSlide * 324}px)` } : {}">
+        <div v-for="post in posts" :key="post.slug" class="article-item">
+          <nuxt-link :to="`/articles/${post.slug}`" class="article-link">
+            <img :src="post.thumbnail" :alt="post.title" class="article-thumb" />
+            <div class="article-info">
+              <h3>{{ post.title }}</h3>
+              <p class="article-date">{{ post.date }}</p>
+              <p class="read-more">記事を読む</p>
+            </div>
+          </nuxt-link>
+        </div>
+      </div>
+    </div>
+    <div v-if="isSliderEnabled" class="slider__btn-left"><img :src="require(`~/assets/img/icon/left-arrow.svg`)" @click="prevSlide"></div>
+    <div v-if="isSliderEnabled" class="slider__btn-right"><img :src="require(`~/assets/img/icon/right-arrow.svg`)" @click="nextSlide"></div>
   </div>
 </template>
 
@@ -28,6 +32,31 @@ export default {
     posts: {
       type: Array,
       required: true
+    },
+    isSliderEnabled: {
+      type: Boolean,
+      default: true
+    }
+  },
+  data() {
+    return {
+      currentSlide: 0
+    };
+  },
+  methods: {
+    nextSlide() {
+      if (this.currentSlide < this.posts.length - 1) {
+        this.currentSlide++;
+      } else {
+        this.currentSlide = 0;
+      }
+    },
+    prevSlide() {
+      if (this.currentSlide > 0) {
+        this.currentSlide--;
+      } else {
+        this.currentSlide = this.posts.length - 1;
+      }
     }
   }
 }
@@ -44,19 +73,60 @@ export default {
   margin: 0 auto;
   width: 100%;
 
-  ul {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    flex-flow: wrap;
-  }
-
   @include sp {
     padding: 40px 16px 0;
   }
 }
 
+.slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s ease;
+  margin-bottom: 56px;
+}
+
+.slider__btn-left {
+  cursor: pointer;
+  position: absolute;
+  left: -61px;
+  bottom: 185px;
+  opacity: 0.7;
+}
+
+.slider__btn-right {
+  cursor: pointer;
+  position: absolute;
+  right: -61px;
+  bottom: 185px;
+  opacity: 0.7;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.indicators span {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: #ccc;
+  transition: background-color 0.3s, width 0.3s;
+}
+
+.indicators span.active {
+  background-color: #26A0F8;
+  width: 34px;
+}
+
 .article-item {
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +135,7 @@ export default {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
-  width: calc(34% - 24px);
+  width: 300px;
   height: auto;
 
   @include sp {
