@@ -51,7 +51,7 @@
         </span>
       </nuxt-link>
     </div>
-    <ArticleList :posts="posts" />
+    <ArticleList :posts="posts" :isTopPage="true" />
     <div class="text-center">
       <nuxt-link to="/articles" class="more fadeonscroll mouse-attract button button-undefined active">
         <span class="button-inner mouse-target">

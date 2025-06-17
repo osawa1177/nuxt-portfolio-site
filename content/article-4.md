@@ -1,7 +1,7 @@
 ---
 title: "デザイナーが実装を含めて考えていること7選"
 date: "2025/6/10"
-tags: ["UIデザイン", "フロントエンド連携", "Figma", "実装配慮"]
+tags: ["UI/UX", "フロントエンド連携", "Figma",]
 thumbnail: "/img/article/dev/dev1.png"
 ---
 

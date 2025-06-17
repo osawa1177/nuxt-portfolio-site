@@ -7,22 +7,41 @@
         気になるテーマがあれば、ぜひ記事もあわせてご覧ください。
       </p>
     </div>
+
+    <!-- タグフィルター -->
+    <div class="tag-filter" v-if="!isTopPage">
+      <button class="tag-button" :class="{ active: selectedTag === null }" @click="selectedTag = null">
+        すべて
+      </button>
+      <button v-for="tag in uniqueTags" :key="tag" class="tag-button" :class="{ active: selectedTag === tag }"
+        @click="selectedTag = tag">
+        {{ tag }}
+      </button>
+    </div>
+
     <div :class="{ 'slider': isSliderEnabled }">
-      <div class="article-wrap" :class="{ 'slider-track': isSliderEnabled }" :style="isSliderEnabled ? { transform: `translateX(-${currentSlide * 324}px)` } : {}">
-        <div v-for="post in posts" :key="post.slug" class="article-item">
+      <div class="article-wrap" :class="{ 'slider-track': isSliderEnabled }"
+        :style="isSliderEnabled ? { transform: `translateX(-${currentSlide * 324}px)` } : {}">
+        <div v-for="post in filteredPosts" :key="post.slug" class="article-item">
           <nuxt-link :to="`/articles/${post.slug}`" class="article-link">
             <img :src="post.thumbnail" :alt="post.title" class="article-thumb" />
             <div class="article-info">
               <h3>{{ post.title }}</h3>
-              <p class="article-date">{{ post.date }}</p>
-              <p class="read-more">記事を読む</p>
+              <div class="article-tags-wrap">
+                <div class="article-tags" v-if="post.tags && post.tags.length > 0">
+                  <span class="tag">{{ post.tags[0] }}</span>
+                </div>
+                <p class="article-date">{{ post.date }}</p>
+              </div>
             </div>
           </nuxt-link>
         </div>
       </div>
     </div>
-    <div v-if="isSliderEnabled" class="slider__btn-left"><img :src="require(`~/assets/img/icon/left-arrow.svg`)" @click="prevSlide"></div>
-    <div v-if="isSliderEnabled" class="slider__btn-right"><img :src="require(`~/assets/img/icon/right-arrow.svg`)" @click="nextSlide"></div>
+    <div v-if="isSliderEnabled" class="slider__btn-left"><img :src="require(`~/assets/img/icon/left-arrow.svg`)"
+        @click="prevSlide"></div>
+    <div v-if="isSliderEnabled" class="slider__btn-right"><img :src="require(`~/assets/img/icon/right-arrow.svg`)"
+        @click="nextSlide"></div>
   </div>
 </template>
 
@@ -36,16 +55,40 @@ export default {
     isSliderEnabled: {
       type: Boolean,
       default: true
+    },
+    isTopPage: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
     return {
-      currentSlide: 0
+      currentSlide: 0,
+      selectedTag: null
     };
+  },
+  computed: {
+    uniqueTags() {
+      const tags = new Set();
+      this.posts.forEach(post => {
+        if (post.tags) {
+          post.tags.forEach(tag => tags.add(tag));
+        }
+      });
+      return Array.from(tags).sort();
+    },
+    filteredPosts() {
+      if (!this.selectedTag || this.isTopPage) {
+        return this.posts;
+      }
+      return this.posts.filter(post =>
+        post.tags && post.tags.includes(this.selectedTag)
+      );
+    }
   },
   methods: {
     nextSlide() {
-      if (this.currentSlide < this.posts.length - 1) {
+      if (this.currentSlide < this.filteredPosts.length - 1) {
         this.currentSlide++;
       } else {
         this.currentSlide = 0;
@@ -55,7 +98,7 @@ export default {
       if (this.currentSlide > 0) {
         this.currentSlide--;
       } else {
-        this.currentSlide = this.posts.length - 1;
+        this.currentSlide = this.filteredPosts.length - 1;
       }
     }
   }
@@ -190,5 +233,62 @@ export default {
   font-weight: 300;
   margin: 0;
   font-size: 14px;
+}
+.tag-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.tag-button {
+  padding: 4px 12px;
+  border: 1px solid #333;
+  border-radius: 16px;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+
+  &:hover {
+    background: #333;
+    color: #fff;
+  }
+
+  &.active {
+    background: #333;
+    color: #fff;
+  }
+}
+
+.article-tags-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: #666;
+  font-size: 10px;
+  line-height: 160%;
+  display: flex;
+  align-items: center;
+  letter-spacing: .08em;
+  font-feature-settings: "palt" on;
+  color: #1c1c1c;
+  border: 1px solid #1c1c1c;
+  border-radius: 100px;
+  transition: all .25s ease-in-out;
 }
 </style>
