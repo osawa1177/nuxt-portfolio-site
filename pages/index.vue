@@ -51,7 +51,17 @@
         </span>
       </nuxt-link>
     </div>
-    <ArticleList :posts="posts" :isTopPage="true" />
+
+    <div class="article__wrap">
+      <div class="c-page__contact-title">
+        <span class="c-page__headline">記事</span>
+        <h2 class="c-page__content">RELATED POSTS</h2>
+        <p>デザインやUI/UXに関する記事をご紹介しています。<br>
+          気になるテーマがあれば、ぜひ記事もあわせてご覧ください。
+        </p>
+      </div>
+      <ArticleList :posts="posts" :isTopPage="true" :showTagFilter="false" />
+    </div>
     <div class="text-center">
       <nuxt-link to="/articles" class="more fadeonscroll mouse-attract button button-undefined active">
         <span class="button-inner mouse-target">
@@ -337,5 +347,11 @@ h1 {
   line-height: 1;
   font-size: 200px;
   color: #333;
+}
+.article__wrap {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding-top: 72px;
 }
 </style>

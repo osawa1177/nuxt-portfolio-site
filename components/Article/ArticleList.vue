@@ -1,15 +1,8 @@
 <template>
   <div class="article-list">
-    <div class="c-page__contact-title">
-      <span class="c-page__headline">記事</span>
-      <h2 class="c-page__content">RELATED POSTS</h2>
-      <p>デザインやUI/UXに関する記事をご紹介しています。<br>
-        気になるテーマがあれば、ぜひ記事もあわせてご覧ください。
-      </p>
-    </div>
 
     <!-- タグフィルター -->
-    <div class="tag-filter" v-if="!isTopPage">
+    <div v-if="showTagFilter" class="tag-filter">
       <button class="tag-button" :class="{ active: selectedTag === null }" @click="selectedTag = null">
         すべて
       </button>
@@ -56,9 +49,9 @@ export default {
       type: Boolean,
       default: true
     },
-    isTopPage: {
+    showTagFilter: {
       type: Boolean,
-      default: false
+      default: true
     }
   },
   data() {
@@ -78,7 +71,7 @@ export default {
       return Array.from(tags).sort();
     },
     filteredPosts() {
-      if (!this.selectedTag || this.isTopPage) {
+      if (!this.selectedTag) {
         return this.posts;
       }
       return this.posts.filter(post =>
@@ -109,7 +102,6 @@ export default {
 .article-list {
   display: flex;
   flex-direction: column;
-  padding-top: 72px;
   height: 100%;
   position: relative;
   max-width: 1100px;
@@ -121,6 +113,13 @@ export default {
   }
 }
 
+.article-wrap {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 .slider {
   overflow: hidden;
   width: 100%;

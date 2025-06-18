@@ -81,7 +81,7 @@ export default {
   gap: 16px;
 }
 
-::v-deep(.article-body h2) {
+::v-deep .article-body h2 {
   font-size: 24px;
   margin: 0;
   font-weight: 600;
@@ -91,7 +91,7 @@ export default {
   }
 }
 
-::v-deep(.article-body h3) {
+::v-deep .article-body h3 {
   font-size: 18px;
   margin: 0;
   padding-left: 8px;
@@ -102,7 +102,7 @@ export default {
   }
 }
 
-::v-deep(.article-body h4) {
+::v-deep .article-body h4 {
   font-size: 16px;
   margin: 0;
   padding-left: 8px;
@@ -113,24 +113,24 @@ export default {
   }
 }
 
-::v-deep(.article-body p) {
+::v-deep .article-body p {
   margin: 0;
   font-size: 16px;
   font-weight: 300;
 }
 
-::v-deep(.article-body li) {
+::v-deep .article-body li {
   margin-bottom: 0.5rem;
 }
 
-::v-deep(.article-body blockquote) {
+::v-deep .article-body blockquote {
   margin: 1.5rem 0;
   padding: 1rem;
   background-color: #f9f9f9;
   border-left: 4px solid #ccc;
   color: #555;
 }
-::v-deep(.article-body ul) {
+::v-deep .article-body ul {
   margin: 0;
   font-size: 1rem;
   padding-left: 40px;
@@ -140,7 +140,7 @@ export default {
   }
 }
 
-::v-deep(.article-body ol) {
+::v-deep .article-body ol {
   margin: 0;
   font-size: 1rem;
   padding-left: 40px;
@@ -150,7 +150,7 @@ export default {
   }
 }
 
-::v-deep(.article-body img) {
+::v-deep .article-body img {
   max-width: 100%;
   border-radius: 8px;
 
@@ -159,8 +159,9 @@ export default {
   }
 }
 
-::v-deep(.article-body a) {
+::v-deep .article-body a {
   color: #0056d2;
   text-decoration: underline;
 }
+
 </style>

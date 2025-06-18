@@ -36,11 +36,35 @@ export default {
   plugins: [],
   components: true,
 
-  buildModules: [],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/google-gtag',
+  ],
 
-  modules: ["@nuxtjs/style-resources", "@nuxtjs/google-gtag", "@nuxtjs/axios"],
+  // buildModules: [
+  //   '@nuxtjs/storybook'
+  // ],
 
-  "google-gtag": {
+  storybook: {
+    stories: ['~/components/**/*.stories.@(js|ts|mdx)'],
+    addons: [
+      '@storybook/addon-essentials',
+      '@storybook/addon-links'
+    ],
+    viteFinal: (config) => config, // Storybook v7+ は vite を推奨（Nuxt 2でも互換あり）
+    parameters: {
+      backgrounds: {
+        default: 'light',
+        values: [
+          { name: 'light', value: '#ffffff' },
+          { name: 'dark', value: '#000000' },
+        ],
+      },
+    }
+  },
+
+  googleAnalytics: {
     id: "G-2QX64DJL5F",
     config: {
       anonymize_ip: true,
@@ -61,9 +85,7 @@ export default {
     transpile: ["gsap"],
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
-        config.node = {
-          fs: "empty",
-        };
+        config.node = { fs: "empty" };
       }
 
       config.module.rules.push({
@@ -71,10 +93,23 @@ export default {
         use: "raw-loader",
       });
     },
+    loaders: {
+      scss: {
+        implementation: require('sass'),
+        sassOptions: {
+          quietDeps: true,
+          outputStyle: 'compressed',
+          logger: {
+            warn: () => { },
+            debug: () => { }
+          }
+        }
+      }
+    }
   },
 
   generate: {
     fallback: true,
     routes: getArticleRoutes(),
-  },
+  }
 };
