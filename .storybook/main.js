@@ -7,10 +7,7 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials'
   ],
-  framework: {
-    name: '@storybook/vue-webpack4',
-    options: {}
-  },
+  framework: '@storybook/vue-webpack4',
   core: {
     builder: 'webpack4'
   },

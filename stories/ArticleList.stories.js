@@ -68,14 +68,14 @@ Default.args = {
       title: 'サンプル記事1',
       date: '2025/6/5',
       tags: ['Webデザイン'],
-      thumbnail: '/img/article/design/design01.png',
+      thumbnail: 'https://osawa-portfolio.web.app/img/article/design-system/design-system01.png',
       slug: 'article-1'
     },
     {
       title: 'サンプル記事2',
       date: '2025/6/6',
       tags: ['UI設計'],
-      thumbnail: '/img/article/ooui/ooui-thumb.png',
+      thumbnail: 'https://osawa-portfolio.web.app/img/article/ooui/ooui-thumb.png',
       slug: 'article-2'
     }
   ],
