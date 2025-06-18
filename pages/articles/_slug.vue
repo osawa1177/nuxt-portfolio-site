@@ -27,6 +27,7 @@
 import { getPostBySlug, getAllPosts } from '@/utils/loadMarkdown';
 import Breadcrumb from '~/components/Breadcrumb.vue'
 import ArticleList from '~/components/Article/ArticleList.vue'
+import hljs from 'highlight.js';
 
 export default {
   components: {
@@ -50,6 +51,14 @@ export default {
   created() {
     const slug = this.$route.params.slug;
     this.post = getPostBySlug(slug);
+  },
+
+  mounted() {
+    this.$nextTick(() => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
   }
 };
 </script>
@@ -191,5 +200,15 @@ export default {
 ::v-deep .article-body a {
   color: #0056d2;
   text-decoration: underline;
+}
+::v-deep pre {
+  color: #fff;
+  border-radius: 3px;
+  font-size: 14px;
+  overflow-x: auto;
+  line-height: 1.7;
+  margin: 24px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border: 1px solid #333;
 }
 </style>

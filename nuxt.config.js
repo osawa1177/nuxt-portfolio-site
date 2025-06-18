@@ -31,9 +31,12 @@ export default {
     ],
   },
 
-  css: ["@/assets/scss/styles.scss"],
+  css: [
+    'highlight.js/styles/github-dark.css',
+    '@/assets/scss/styles.scss'
+  ],
 
-  plugins: [],
+  plugins: ['~/plugins/markdown-it.js'],
   components: true,
 
   modules: [
@@ -41,10 +44,6 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/google-gtag',
   ],
-
-  // buildModules: [
-  //   '@nuxtjs/storybook'
-  // ],
 
   storybook: {
     stories: ['~/components/**/*.stories.@(js|ts|mdx)'],
