@@ -1,0 +1,12 @@
+#storybook-root {
+  background-color: #000;
+}
+
+.sb-show-main.sb-main-padded {
+  background-color: #000 !important;
+  color: #fff;
+  padding: 2rem;
+}
+
+// 既存のスタイル
+@import '../assets/scss/style.scss';

@@ -3,10 +3,10 @@ import Vue from 'vue';
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: {
-    default: 'light',
+    default: 'dark',
     values: [
       { name: 'light', value: '#ffffff' },
-      { name: 'dark', value: '#000000' }
+      { name: 'dark', value: '#3D3D3D' }
     ],
   },
   controls: {
