@@ -14,24 +14,37 @@
           </span>
         </nuxt-link>
       </div>
+
+      <div class="related-articles">
+        <h2 class="related-articles__title">関連記事</h2>
+        <ArticleList :posts="relatedArticles" :show-tags="false" :show-tag-filter="false" />
+      </div>
     </article>
   </div>
 </template>
 
 <script>
-import { getPostBySlug } from '@/utils/loadMarkdown';
+import { getPostBySlug, getAllPosts } from '@/utils/loadMarkdown';
 import Breadcrumb from '~/components/Breadcrumb.vue'
+import ArticleList from '~/components/Article/ArticleList.vue'
 
 export default {
-  components: { Breadcrumb },
+  components: {
+    Breadcrumb,
+    ArticleList
+  },
   async asyncData({ params }) {
     const post = getPostBySlug(params.slug)
+    const allPosts = getAllPosts()
+    const currentIndex = allPosts.findIndex(p => p.slug === params.slug)
+    const relatedArticles = allPosts.filter((_, index) => index !== currentIndex)
+
     const breadcrumbs = [
       { path: '/', label: 'TOP' },
       { path: '/articles', label: '記事一覧' },
       { path: `/articles/${params.slug}`, label: post.title }
     ]
-    return { post, breadcrumbs }
+    return { post, breadcrumbs, relatedArticles }
   },
 
   created() {
@@ -81,6 +94,22 @@ export default {
   gap: 16px;
 }
 
+.related-articles {
+  margin-top: 72px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 32px;
+    font-weight: 600;
+
+    @include sp {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+  }
+}
 ::v-deep .article-body h2 {
   font-size: 24px;
   margin: 0;
@@ -163,5 +192,4 @@ export default {
   color: #0056d2;
   text-decoration: underline;
 }
-
 </style>
