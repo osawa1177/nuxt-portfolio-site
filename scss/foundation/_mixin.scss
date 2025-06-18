@@ -1,0 +1,30 @@
+// Breakpoints
+$pc: 1080px;
+$tab: 768px;
+$sp: 480px;
+
+// Mixins
+@mixin flexbox($wrap: nowrap, $align: stretch, $justify: center) {
+  display: flex;
+  flex-wrap: $wrap;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin pc {
+  @media screen and (max-width: $pc) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (max-width: $tab) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: $sp) {
+    @content;
+  }
+}
