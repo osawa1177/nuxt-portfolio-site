@@ -3,17 +3,24 @@
     <div class="c-page__contact-title">
       <span class="c-page__headline">これまでの実績</span>
       <h2 class="c-page__content">PROJECTS</h2>
-      <p> デザイン、フロントエンド、CSS設計、モダンな開発環境を使用してプロジェクトを実装しています。
-      </p>
+      <p>デザイン、フロントエンド、CSS設計、モダンな開発環境を使用してプロジェクトを実装しています。</p>
     </div>
     <section>
       <div class="projects__wrap">
-        <div v-for="(project, index) in projects.slice(0, displayCount)" :key="index" class="projects__block fade-down" :class="project.textBlockClass">
+        <div v-for="(project, index) in projects.slice(0, displayCount)" :key="index" class="projects__block fade-down"
+          :class="project.textBlockClass">
           <div class="projects__text-block">
-            <h3 class="projects__text-title">{{ project.title }}</h3>
-            <p class="projects__tag">{{ project.tag }}</p>
-            <p class="projects__description">{{ project.description }}</p>
-            <nuxt-link :to="`/projects/${project.link}`" class="more fadeonscroll mouse-attract button button-undefined active">
+            <h3 class="projects__text-title">
+              {{ project.title }}
+            </h3>
+            <p class="projects__tag">
+              {{ project.tag }}
+            </p>
+            <p class="projects__description">
+              {{ project.description }}
+            </p>
+            <nuxt-link :to="`/projects/${project.link}`"
+              class="more fadeonscroll mouse-attract button button-undefined active">
               <span class="button-inner mouse-target">
                 <span class="button-fill"></span>
                 <span class="button-caption">View</span>
@@ -26,16 +33,16 @@
         </div>
       </div>
     </section>
-
   </div>
 </template>
+
 <script>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import projectsData from '~/data/projects.json';
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import projectsData from "~/data/projects.json"
 
 if (process.client) {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger)
 }
 
 export default {
@@ -47,18 +54,17 @@ export default {
     displayCount: {
       type: Number,
       default() {
-        return this.projects ? this.projects.length : 0; // デフォルトで全件表示
-      }
-    }
+        return this.projects ? this.projects.length : 0 // デフォルトで全件表示
+      },
+    },
   },
-
-
   mounted() {
-    this.scrollItemC();
+    this.scrollItemC()
   },
   methods: {
     scrollItemC() {
-      if (window.innerWidth <= 768) return;
+      if (window.innerWidth <= 768) return
+
       gsap.from(".fade-down", {
         scrollTrigger: {
           trigger: ".fade-down",
@@ -70,17 +76,16 @@ export default {
         y: -10,
         opacity: 0,
         stagger: 0.13,
-      });
+      })
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/foundation/_button.scss';
+@import "~/assets/scss/foundation/_button.scss";
 
 .projects {
-
   &__wrap {
     max-width: 1100px;
     margin: 0 auto;
@@ -121,6 +126,17 @@ export default {
     min-height: 300px;
     border-radius: 3px;
 
+    &::after {
+      mix-blend-mode: overlay;
+      content: "";
+      border-radius: inherit;
+      pointer-events: none;
+      background: linear-gradient(rgba(255, 255, 255, 0.6), rgb(231 215 190 / 60%) 0%, rgba(127, 104, 69, 0.4) 105%, rgba(255, 255, 255, 0.2)) border-box;
+      border: 1.5px solid rgba(0, 0, 0, 0);
+      position: absolute;
+      inset: 0;
+    }
+
     @include sp {
       flex-direction: column-reverse;
       gap: 0;
@@ -128,33 +144,32 @@ export default {
     }
 
     &--pay {
-      background: #3B5385;
+      background: var(--background-pay);
     }
 
     &--money {
-      background: #1E4762;
+      background: var(--background-money);
     }
 
     &--fire {
-      background: #5276B4;
+      background: var(--background-fire);
     }
 
     &--live {
-      background: #415D94;
+      background: var(--background-live);
     }
 
     &--auto {
-      background: #656584
+      background: var(--background-auto);
     }
 
     &--flight {
-      background: #155170
+      background: var(--background-flight);
     }
 
     &--video {
-      background: #38413F
+      background: var(--background-video);
     }
-
   }
 
   &__text-block {
@@ -219,5 +234,6 @@ export default {
 .button-inner {
   line-height: 0px;
   padding: 24px 48px;
+  background-color: var(--btn-background)
 }
 </style>

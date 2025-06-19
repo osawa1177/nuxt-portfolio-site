@@ -179,6 +179,7 @@ export default {
   transition: transform 0.3s;
   width: 300px;
   height: auto;
+  background: var(--card-background);
 
   @include sp {
     width: 100%;

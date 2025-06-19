@@ -183,6 +183,7 @@ export default {
   font-weight: 500;
   color: $blue400;
   margin: 0 0 16px;
+  font-weight: 600;
 
   @include sp {
     margin: 0 0 8px;

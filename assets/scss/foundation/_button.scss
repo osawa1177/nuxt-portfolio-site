@@ -39,8 +39,8 @@
   border-radius: 55px;
   vertical-align: top;
 
-    @include sp {
-  padding: 20px 40px;
+  @include sp {
+    padding: 20px 40px;
 
   }
 }
@@ -144,6 +144,7 @@
   width: 100%;
   padding-top: 100%;
   transform: translate(-50%, -50%);
+  background: var(--btn-background);
 }
 
 .button-fill:before {

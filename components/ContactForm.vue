@@ -115,7 +115,7 @@ export default {
     padding: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #f5f5f5;
     font-size: 16px;
     border-radius: 8px;
     border: 1px solid transparent;
@@ -127,7 +127,7 @@ export default {
     max-width: 350px;
     padding: 16px;
     background-color: #26A0F8;
-    color: white;
+    color: $white;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -153,7 +153,7 @@ export default {
   &__contact-form label {
     width: 100%;
     font-weight: 500;
-    color: #fff;
+    color: var(--text);
     display: flex;
     align-items: center;
   }
@@ -192,7 +192,7 @@ export default {
     padding: 16px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #f5f5f5;
     font-size: 16px;
     border: 1px solid transparent;
     appearance: none;
@@ -240,7 +240,7 @@ export default {
   line-height: 20px;
   text-align: center;
   font-feature-settings: "pkna" on;
-  color: #ffffff;
+  color: $white;
   background: #ea3800;
   border-radius: 50px;
 }

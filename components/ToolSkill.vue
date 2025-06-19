@@ -425,7 +425,6 @@ export default {
     order: 1;
   }
 
-  @include sp {}
 }
 
 .tool-skill-item {
@@ -434,13 +433,14 @@ export default {
   padding: 1.6em 0.8em 1.3em;
   text-align: center;
   font-weight: bold;
-  border: solid 1px $white26;
+  border: solid 1px var(--tool-border);
   border-radius: 4px;
   box-shadow: 0 2px 4px -1px $black12;
   background: $black;
   text-decoration: none;
   transition: 0.2s;
-  color: $white;
+  color: var(--text);
+    background: var(--tool-background);
 
   @include sp {
     width: 47%

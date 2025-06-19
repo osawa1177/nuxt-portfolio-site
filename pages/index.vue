@@ -301,7 +301,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: var(--background);
   position: relative;
   gap: 16px;
 

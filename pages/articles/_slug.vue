@@ -69,7 +69,7 @@ export default {
 }
 
 .article-container {
-  color: #ededed;
+  color: var(--text);
   max-width: 800px;
   margin: 72px auto;
   font-family: 'Noto Sans JP', sans-serif;
@@ -202,7 +202,7 @@ export default {
   text-decoration: underline;
 }
 ::v-deep pre {
-  color: #fff;
+  color: var(--text);
   border-radius: 3px;
   font-size: 14px;
   overflow-x: auto;
