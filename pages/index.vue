@@ -17,27 +17,32 @@
     </nav>
 
     <script>
-      var toggle = document.querySelector(".menu-toggle");
-      var menu = document.querySelector(".menu");
-
-      toggle.addEventListener("click", function () {
-        menu.classList.toggle("open");
-      });
+    var toggle = document.querySelector(".menu-toggle");
+    var menu = document.querySelector(".menu");
+    toggle.addEventListener("click", function() {
+      menu.classList.toggle("open");
+    });
     </script>
     <section class="section hero">
       <div class="container">
-        <a class="underlined underlined_angular"><span>Design.</span></a>
-        <a class="underlined underlined_dashed"><span>Development.</span></a>
-        <a class="underlined underlined_waved"><span>Maintenance.</span></a>
+        <div class="hero__text-block">
+          <a class="underlined underlined_angular"><span>Design.</span></a>
+          <a class="underlined underlined_dashed"><span>Development.</span></a>
+          <a class="underlined underlined_waved"><span>Maintenance.</span></a>
+        </div>
+        <div class="image-grid">
+          <div class="image-item"><img src="~/assets/img/hero/hero01.png" alt="説明1"></div>
+          <div class="image-item"><img src="~/assets/img/hero/hero02.png" alt="説明2"></div>
+          <div class="image-item"><img src="~/assets/img/hero/hero03.png" alt="説明3"></div>
+        </div>
       </div>
 
-      <div class="bgLight">
-        <div class="bgLight__pos bgLight__one"></div>
-        <div class="bgLight__pos bgLight__two"></div>
-        <div class="bgLight__pos bgLight__three"></div>
-      </div>
     </section>
-
+    <div class="bgLight">
+      <div class="bgLight__pos bgLight__one"></div>
+      <div class="bgLight__pos bgLight__two"></div>
+      <div class="bgLight__pos bgLight__three"></div>
+    </div>
     <Gallery />
     <Services />
     <Design />
@@ -76,15 +81,15 @@
   </div>
 </template>
 <script>
-import { getAllPosts } from '@/utils/loadMarkdown.client';
-import projectsData from '~/data/projects.json';
-import ContactForm from '~/components/ContactForm.vue';
-import ArticleList from '~/components/Article/ArticleList.vue';
+import { getAllPosts } from "@/utils/loadMarkdown.client";
+import projectsData from "~/data/projects.json";
+import ContactForm from "~/components/ContactForm.vue";
+import ArticleList from "~/components/Article/ArticleList.vue";
 
 export default {
   components: {
     ContactForm,
-    ArticleList
+    ArticleList,
   },
   data() {
     return {
@@ -95,12 +100,11 @@ export default {
   created() {
     this.posts = getAllPosts();
   },
-
 };
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/foundation/_button.scss';
+@import "~/assets/scss/foundation/_button.scss";
 
 .text-center {
   text-align: center;
@@ -169,17 +173,20 @@ nav.menu ul li a:hover {
   font-size: 48px;
   font-weight: 600;
   line-height: 1.3;
-  margin: 0 0 7rem;
 
   @include sp {
     margin: 0 0 0.5rem;
   }
 }
 
+.underlined_angular {
+  width: 53%;
+}
+
 .underlined:after,
 .underlined:before {
   position: absolute;
-  width: 100%;
+  width: 88%;
   height: 11px;
   bottom: -10px;
   left: 0;
@@ -299,59 +306,120 @@ h1 {
 .container {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--background);
   position: relative;
-  gap: 16px;
-
-  @include sp {
-    flex-direction: column;
-  }
-}
-
-.hero-overlay {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 9;
-}
-
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.hero-background-design {
-  background: linear-gradient(204.37deg, #8980f6 -6.62%, #1fa9ff 112.89%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-  transition: all 0.5s;
-  z-index: -1;
-}
-
-.hero h1 .underlined {
-  display: inline-block;
-  line-height: 1;
-  font-size: 200px;
-  color: #333;
-}
-.article__wrap {
-  width: 100%;
-  margin: 0 auto;
+  flex-direction: row;
+  text-align: left;
   max-width: 1100px;
-  padding-top: 72px;
+  margin: auto;
+  align-items: center;
+
+  .hero-overlay {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 9;
+    }
+
+        .hero-video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: all 0.5s;
+          object-fit: cover;
+          z-index: -1;
+        }
+
+        .hero-background-design {
+          background: linear-gradient(204.37deg, #8980f6 -6.62%, #1fa9ff 112.89%);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.6;
+          transition: all 0.5s;
+          z-index: -1;
+        }
+
+        .hero h1 .underlined {
+          display: inline-block;
+          line-height: 1;
+          font-size: 200px;
+          color: #333;
+        }
+
+        .article__wrap {
+          width: 100%;
+          margin: 0 auto;
+          max-width: 1100px;
+          padding-top: 72px;
+        }
+
+        .hero {
+          &__text-block {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            width: 34%;
+            margin-right: 90px;
+          }
+        }
+
+        .image-grid {
+          display: grid;
+          grid-template-columns: 1.2fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          gap: 24px 0;
+          grid-template-areas:
+            "main right-top"
+            "main right-bottom";
+          width: 52%;
+
+          @include sp {
+            display: block;
+          }
+
+          .image-item:nth-child(1) {
+            grid-area: main;
+            aspect-ratio: 1/1;
+            margin: auto;
+            width: 250px;
+            height: 388px;
+            margin-left: 38px;
+          }
+
+          .image-item:nth-child(2) {
+            grid-area: right-top;
+            aspect-ratio: 1/1;
+          }
+
+          .image-item:nth-child(3) {
+            grid-area: right-bottom;
+            aspect-ratio: 1/1;
+          }
+
+          .image-item {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 3px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+            }
+          }
+        }
+        }
+
+        .article__wrap {
+          max-width: 1100px;
+          margin: 0 auto;
+          width: 100%;
 }
 </style>
