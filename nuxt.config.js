@@ -29,6 +29,26 @@ export default {
         href: "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap",
       },
     ],
+    script: [
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-2QX64DJL5F',
+        async: true
+      },
+      {
+        hid: 'gtag-inline-script',
+        innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-2QX64DJL5F');
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8'
+      }
+    ],
+    __dangerouslyDisableSanitizersByTagID: {
+      'gtag-inline-script': ['innerHTML']
+    }
   },
 
   css: [
@@ -42,7 +62,6 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
-    '@nuxtjs/google-gtag',
   ],
 
   storybook: {
@@ -61,14 +80,6 @@ export default {
         ],
       },
     }
-  },
-
-  googleAnalytics: {
-    id: "G-2QX64DJL5F",
-    config: {
-      anonymize_ip: true,
-    },
-    debug: false,
   },
 
   styleResources: {
