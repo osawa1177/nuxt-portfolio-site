@@ -8,6 +8,11 @@ import ContactForm from '~/components/ContactForm.vue';
 export default {
   components: {
     ContactForm
+  },
+  head() {
+    return {
+      title: 'お問い合わせ | ポートフォリオ'
+    }
   }
 }
 </script>

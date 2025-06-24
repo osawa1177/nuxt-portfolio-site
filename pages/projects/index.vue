@@ -27,6 +27,11 @@ export default {
         { text: 'プロジェクト一覧', path: '/projects' }
       ]
     };
+  },
+  head() {
+    return {
+      title: 'プロジェクト一覧 | ポートフォリオ'
+    }
   }
 };
 </script>

@@ -37,6 +37,11 @@ export default {
         { text: '記事一覧', path: '/articles' }
       ]
     };
+  },
+  head() {
+    return {
+      title: '記事一覧 | ポートフォリオ'
+    }
   }
 };
 </script>

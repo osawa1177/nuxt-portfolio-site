@@ -52,3 +52,13 @@
 
 }
 </style>
+
+<script>
+export default {
+  head() {
+    return {
+      title: '送信完了 | ポートフォリオ'
+    }
+  },
+}
+</script>

@@ -59,6 +59,14 @@ export default {
         hljs.highlightBlock(block);
       });
     });
+  },
+
+  head() {
+    return {
+      title: this.post?.title
+        ? `${this.post.title} | ポートフォリオ`
+        : '記事 | ポートフォリオ'
+    }
   }
 };
 </script>
